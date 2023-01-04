@@ -1,0 +1,160 @@
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw.xtc
+title:	n20:FRAMES:Direct:HETs_MET_4pw
+additional_info:	Direct
+filename:	n20_FRAMES_Direct_HETs_MET_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw.xtc
+title:	n20:FRAMES:Product:HETs_MET_4pw
+additional_info:	Product
+filename:	n20_FRAMES_Product_HETs_MET_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw.xtc
+title:	n20:FRAMES:PAS>hops_3site:HETs_MET_4pw
+additional_info:	PAS>hops_3site
+filename:	n20_FRAMES_PAS_hops_3site_HETs_MET_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw.xtc
+title:	n20:FRAMES:hops_3site>methylCC:HETs_MET_4pw
+additional_info:	hops_3site>methylCC
+filename:	n20_FRAMES_hops_3site_methylCC_HETs_MET_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw.xtc
+title:	n20:FRAMES:methylCC>LF:HETs_MET_4pw
+additional_info:	methylCC>LF
+filename:	n20_FRAMES_methylCC_LF_HETs_MET_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw.xtc
+title:	n20:FRAMES:Avg_Direct:HETs_MET_4pw
+additional_info:	Avg_Direct
+filename:	n20_FRAMES_Direct_HETs_MET_4pw1.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw.xtc
+title:	n20:FRAMES:Avg_Product:HETs_MET_4pw
+additional_info:	Avg_Product
+filename:	n20_FRAMES_Product_HETs_MET_4pw1.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw.xtc
+title:	n20:FRAMES:Avg_PAS>hops_3site:HETs_MET_4pw
+additional_info:	Avg_PAS>hops_3site
+filename:	n20_FRAMES_PAS_hops_3site_HETs_MET_4pw1.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw.xtc
+title:	n20:FRAMES:Avg_hops_3site>methylCC:HETs_MET_4pw
+additional_info:	Avg_hops_3site>methylCC
+filename:	n20_FRAMES_hops_3site_methylCC_HETs_MET_4pw1.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw.xtc
+title:	n20:FRAMES:Avg_methylCC>LF:HETs_MET_4pw
+additional_info:	Avg_methylCC>LF
+filename:	n20_FRAMES_methylCC_LF_HETs_MET_4pw1.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw.xtc
+title:	p12:FRAMES:Avg_Direct:HETs_MET_4pw
+additional_info:	Avg_Direct
+filename:	p12_FRAMES_Avg_Direct_HETs_MET_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw.xtc
+title:	p12:FRAMES:Avg_Product:HETs_MET_4pw
+additional_info:	Avg_Product
+filename:	p12_FRAMES_Avg_Product_HETs_MET_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw.xtc
+title:	p12:FRAMES:Avg_PAS>hops_3site:HETs_MET_4pw
+additional_info:	Avg_PAS>hops_3site
+filename:	p12_FRAMES_Avg_PAS_hops_3site_HETs_MET_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw.xtc
+title:	p12:FRAMES:Avg_hops_3site>methylCC:HETs_MET_4pw
+additional_info:	Avg_hops_3site>methylCC
+filename:	p12_FRAMES_Avg_hops_3site_methylCC_HETs_MET_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw.xtc
+title:	p12:FRAMES:Avg_methylCC>LF:HETs_MET_4pw
+additional_info:	Avg_methylCC>LF
+filename:	p12_FRAMES_Avg_methylCC_LF_HETs_MET_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw.xtc
+title:	o12:FRAMES:Avg_Direct:HETs_MET_4pw
+additional_info:	Avg_Direct
+filename:	o12_FRAMES_Avg_Direct_HETs_MET_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw.xtc
+title:	o12:FRAMES:Avg_Product:HETs_MET_4pw
+additional_info:	Avg_Product
+filename:	o12_FRAMES_Avg_Product_HETs_MET_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw.xtc
+title:	o12:FRAMES:Avg_PAS>hops_3site:HETs_MET_4pw
+additional_info:	Avg_PAS>hops_3site
+filename:	o12_FRAMES_Avg_PAS_hops_3site_HETs_MET_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw.xtc
+title:	o12:FRAMES:Avg_hops_3site>methylCC:HETs_MET_4pw
+additional_info:	Avg_hops_3site>methylCC
+filename:	o12_FRAMES_Avg_hops_3site_methylCC_HETs_MET_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw.xtc
+title:	o12:FRAMES:Avg_methylCC>LF:HETs_MET_4pw
+additional_info:	Avg_methylCC>LF
+filename:	o12_FRAMES_Avg_methylCC_LF_HETs_MET_4pw.data
+END:DATA
