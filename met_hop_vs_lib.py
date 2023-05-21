@@ -15,7 +15,7 @@ from scipy.optimize import leastsq
 from pyDR.misc.Averaging import avgData
 
 frames=pyDR.Project('proj_md')
-sub=frames['HETs_MET_4pw']['.+Met']
+sub=frames['HETs_MET_4pw_SegB']['.+Met']
 
 
 #%% Function to calculate librational amplitude from S2
@@ -179,40 +179,40 @@ class Z2lib():
         fig.tight_layout()
         
     def plot_z_v_S2(self):
-            """
-            Plots the fit of correlation time of hopping to order parameter of 
-            librational motion. Shown as two plots, one with log-correlation time
-            vs. S2, and the other with log-correlation time  vs. 1/sigma^2, the
-            latter being the linear plot. Data points excluded from the linear
-            fit are shown in red.
+        """
+        Plots the fit of correlation time of hopping to order parameter of 
+        librational motion. Shown as two plots, one with log-correlation time
+        vs. S2, and the other with log-correlation time  vs. 1/sigma^2, the
+        latter being the linear plot. Data points excluded from the linear
+        fit are shown in red.
 
-            Returns
-            -------
-            None.
+        Returns
+        -------
+        None.
 
-            """
-            fig=plt.figure()
-            ax=[fig.add_subplot(1,2,k+1) for k in range(2)]
-            ax[0].scatter(self.z[self.index],self.S2[self.index])
-            ni=np.logical_not(self.index)
-            ax[0].scatter(self.z[ni],self.S2[ni],color='red',marker='x')
-            z=np.sort(self.z)
-            ax[0].plot(z,self.z2S2(z),color='black')
-            # ax[0].set_xlabel(r'log$_{10}$($\tau_c$/s)')
-            ax[0].set_xticks(np.linspace(-11,-10.2,5))
-            ax[0].set_xticklabels([None if k%2 else '{:.0f} ps'.format(10**v*1e12) for k,v in enumerate(ax[0].get_xticks())])
-            ax[0].set_xlabel(r'$\tau_c$')
-            ax[0].set_ylabel(r'$S^2$')
-            
-            ax[1].scatter(self.z[self.index],1/self.sigma[self.index]**2)
-            ax[1].scatter(self.z[ni],1/self.sigma[ni]**2,color='red',marker='x')
-            ax[1].plot(z,self.b[0]+self.b[1]*z,color='black')
-            ax[1].set_xticks(np.linspace(-11,-10.2,5))
-            ax[1].set_xticklabels([None if k%2 else '{:.0f} ps'.format(10**v*1e12) for k,v in enumerate(ax[0].get_xticks())])
-            ax[1].set_xlabel(r'$\tau_c$')
-            ax[1].set_ylabel(r'$1/\sigma^2 / (^\circ)^{-2}$')
-            fig.set_size_inches([8.5,4])
-            fig.tight_layout()
+        """
+        fig=plt.figure()
+        ax=[fig.add_subplot(1,2,k+1) for k in range(2)]
+        ax[0].scatter(self.z[self.index],self.S2[self.index])
+        ni=np.logical_not(self.index)
+        ax[0].scatter(self.z[ni],self.S2[ni],color='red',marker='x')
+        z=np.sort(self.z)
+        ax[0].plot(z,self.z2S2(z),color='black')
+        # ax[0].set_xlabel(r'log$_{10}$($\tau_c$/s)')
+        ax[0].set_xticks(np.linspace(-11,-10.2,5))
+        ax[0].set_xticklabels([None if k%2 else '{:.0f} ps'.format(10**v*1e12) for k,v in enumerate(ax[0].get_xticks())])
+        ax[0].set_xlabel(r'$\tau_c$')
+        ax[0].set_ylabel(r'$S^2$')
+        
+        ax[1].scatter(self.z[self.index],1/self.sigma[self.index]**2)
+        ax[1].scatter(self.z[ni],1/self.sigma[ni]**2,color='red',marker='x')
+        ax[1].plot(z,self.b[0]+self.b[1]*z,color='black')
+        ax[1].set_xticks(np.linspace(-11,-10.2,5))
+        ax[1].set_xticklabels([None if k%2 else '{:.0f} ps'.format(10**v*1e12) for k,v in enumerate(ax[0].get_xticks())])
+        ax[1].set_xlabel(r'$\tau_c$')
+        ax[1].set_ylabel(r'$1/\sigma^2 / (^\circ)^{-2}$')
+        fig.set_size_inches([8.5,4])
+        fig.tight_layout()
         
     def plot_MFvDet(self):
         proj=self.subproj._parent
@@ -296,56 +296,6 @@ class Z2lib():
         self.sens=sens        
 
 
-if __name__=='__main__':
-    
-    "First we make the plot fitting sigma (methyl libration) to tau_met (methyl hopping)"
-    z2lib=Z2lib()
-    z2lib.plot()
-    
-    
-    data=pyDR.Project('directHC')['NMR']['proc'][0]
-    z,sigma,z0=z2lib.fit2z_sigma(data)
-    fig=plt.figure()
-    ax=[fig.add_subplot(1,2,k+1) for k in range(2)]
-    ax[0].plot(z,color='black')
-    # ax[0].plot(z0)
-    ax[0].set_ylim([-11,-9.5])
-    ax[0].set_yticks(np.linspace(-11,-9.5,7))
-    labels=['{:.0f}  ps'.format(10**z*1e12) for k,z in enumerate(ax[0].get_yticks())]
-    ax[0].set_yticklabels(labels)
-    # ax[0].legend(('Libr. Corrected','Uncorrected'))
-    ax[0].set_xticks(range(len(z)))
-    ax[0].set_xticklabels(data.label,rotation=90)
-    ax[0].set_xlabel('Residue')
-    ax[0].set_ylabel(r'$\tau_\mathrm{met}$ / ps')
-    ax[1].bar(range(len(sigma)),1-S2_2_libA.sigma2S2(sigma))
-    ax[1].set_xticks(range(len(z)))
-    ax[1].set_xticklabels(data.label,rotation=90)
-    ax[1].set_xlabel('Residue')
-    ax[1].set_ylabel(r'$1-S^2_\mathrm{lib.}$')
-    fig.set_size_inches([9.7,6.6])
-    fig.tight_layout()
-    
-    sim=pyDR.Project('proj_exp')['MetHop']
-    
-    index=list()
-    for label in data.label:
-        i0=np.argwhere([label[:3]==lbl[:3] for lbl in sim[0].label])[:,0]
-        if len(i0)==2:
-            if sim[0].label[i0][0][4:6]==sim[0].label[i0][1][4:6]:
-                index.append(i0)
-            else:
-                index.append(i0[1])
-        else:
-            index.append(i0[0])
-    index[9]=[28, 29, 30, 31, 34, 35]
-    
-    sim=np.sum(avgData(sim,index))
 
-    zmd=[model_free(s,nz=1)[0][0] for s in sim]
-    
-    for zmd0 in zmd:
-        ax[0].scatter(range(len(zmd0)),zmd0)
-    ax[0].legend(('Exper.','methyl corr.','w/o methyl corr.'))
 
 

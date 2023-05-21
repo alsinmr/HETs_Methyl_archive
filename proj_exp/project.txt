@@ -81,80 +81,80 @@ END:DATA
 DATA
 Type:	Frames
 status:	opt_fit
-short_file:	HETs_MET_4pw.xtc
-title:	o12:FRAMES:Direct:HETs_MET_4pw
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o12:FRAMES:Direct:HETs_MET_4pw_SegB
 additional_info:	Direct
-filename:	o12_FRAMES_Direct_HETs_MET_4pw.data
+filename:	o12_FRAMES_Direct_HETs_MET_4pw_SegB.data
 END:DATA
 DATA
 Type:	Frames
 status:	opt_fit
-short_file:	HETs_MET_4pw.xtc
-title:	o12:FRAMES:Product:HETs_MET_4pw
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o12:FRAMES:Product:HETs_MET_4pw_SegB
 additional_info:	Product
-filename:	o12_FRAMES_Product_HETs_MET_4pw.data
+filename:	o12_FRAMES_Product_HETs_MET_4pw_SegB.data
 END:DATA
 DATA
 Type:	Frames
 status:	opt_fit
-short_file:	HETs_MET_4pw.xtc
-title:	o12:FRAMES:MetLib:HETs_MET_4pw
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o12:FRAMES:MetLib:HETs_MET_4pw_SegB
 additional_info:	MetLib
-filename:	o12_FRAMES_MetLib_HETs_MET_4pw.data
+filename:	o12_FRAMES_MetLib_HETs_MET_4pw_SegB.data
 END:DATA
 DATA
 Type:	Frames
 status:	opt_fit
-short_file:	HETs_MET_4pw.xtc
-title:	o12:FRAMES:MetHop:HETs_MET_4pw
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o12:FRAMES:MetHop:HETs_MET_4pw_SegB
 additional_info:	MetHop
-filename:	o12_FRAMES_MetHop_HETs_MET_4pw.data
+filename:	o12_FRAMES_MetHop_HETs_MET_4pw_SegB.data
 END:DATA
 DATA
 Type:	Frames
 status:	opt_fit
-short_file:	HETs_MET_4pw.xtc
-title:	o12:FRAMES:Chi2Lib:HETs_MET_4pw
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o12:FRAMES:Chi2Lib:HETs_MET_4pw_SegB
 additional_info:	Chi2Lib
-filename:	o12_FRAMES_Chi2Lib_HETs_MET_4pw.data
+filename:	o12_FRAMES_Chi2Lib_HETs_MET_4pw_SegB.data
 END:DATA
 DATA
 Type:	Frames
 status:	opt_fit
-short_file:	HETs_MET_4pw.xtc
-title:	o12:FRAMES:Chi2Hop:HETs_MET_4pw
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o12:FRAMES:Chi2Hop:HETs_MET_4pw_SegB
 additional_info:	Chi2Hop
-filename:	o12_FRAMES_Chi2Hop_HETs_MET_4pw.data
+filename:	o12_FRAMES_Chi2Hop_HETs_MET_4pw_SegB.data
 END:DATA
 DATA
 Type:	Frames
 status:	opt_fit
-short_file:	HETs_MET_4pw.xtc
-title:	o12:FRAMES:Chi1Lib:HETs_MET_4pw
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o12:FRAMES:Chi1Lib:HETs_MET_4pw_SegB
 additional_info:	Chi1Lib
-filename:	o12_FRAMES_Chi1Lib_HETs_MET_4pw.data
+filename:	o12_FRAMES_Chi1Lib_HETs_MET_4pw_SegB.data
 END:DATA
 DATA
 Type:	Frames
 status:	opt_fit
-short_file:	HETs_MET_4pw.xtc
-title:	o12:FRAMES:Chi1Hop:HETs_MET_4pw
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o12:FRAMES:Chi1Hop:HETs_MET_4pw_SegB
 additional_info:	Chi1Hop
-filename:	o12_FRAMES_Chi1Hop_HETs_MET_4pw.data
+filename:	o12_FRAMES_Chi1Hop_HETs_MET_4pw_SegB.data
 END:DATA
 DATA
 Type:	Frames
 status:	opt_fit
-short_file:	HETs_MET_4pw.xtc
-title:	o12:FRAMES:CaCb:HETs_MET_4pw
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o12:FRAMES:CaCb:HETs_MET_4pw_SegB
 additional_info:	CaCb
-filename:	o12_FRAMES_CaCb_HETs_MET_4pw.data
+filename:	o12_FRAMES_CaCb_HETs_MET_4pw_SegB.data
 END:DATA
 DATA
 Type:	Frames
 status:	opt_fit
-short_file:	HETs_MET_4pw.xtc
-title:	o12:FRAMES:OuterHop:HETs_MET_4pw
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o12:FRAMES:OuterHop:HETs_MET_4pw_SegB
 additional_info:	OuterHop
-filename:	o12_FRAMES_OuterHop_HETs_MET_4pw.data
+filename:	o12_FRAMES_OuterHop_HETs_MET_4pw_SegB.data
 END:DATA

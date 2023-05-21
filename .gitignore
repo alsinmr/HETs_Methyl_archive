@@ -116,3 +116,6 @@ dmypy.json
 # Figure files
 **/*.png
 **/*.pdf
+
+# npy files
+**/*.npy

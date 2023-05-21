@@ -29,31 +29,29 @@ z,sigma,z0=z2lib.fit2z_sigma(data)  #Hopping log(tc),libration stdev, Hopping lo
 S2lib=z2lib.z2S2(z)
 
 zhop=np.linspace(-11.2,-10,101)
-# zhop=np.linspace(-11.2,-9.52,36)
-error=list()
-for zhop0 in zhop:    
-    print(zhop0)
-    S2lib=z2lib.z2S2(zhop0)
-    Rmet=linear_ex(data.sens.z,data.sens.rhoz,zhop0)*(S2lib-S2hop)+\
-        data.sens.rhoz[:,0]*(1-S2lib)
-    diff=copy(data)
-    diff.R-=Rmet
-    diff.src_data.S2+=8/9
-    diff=diff.opt2dist()
-    diff.src_data.S2-=8/9
-    diff.R+=Rmet
+
+# error=list()
+# for zhop0 in zhop:    
+#     print(zhop0)
+#     S2lib=z2lib.z2S2(zhop0)
+#     Rmet=linear_ex(data.sens.z,data.sens.rhoz,zhop0)*(S2lib-S2hop)+\
+#         data.sens.rhoz[:,0]*(1-S2lib)
+#     diff=copy(data)
+#     diff.R-=Rmet
+#     diff.src_data.S2+=8/9
+#     diff=diff.opt2dist()
+#     diff.src_data.S2-=8/9
+#     diff.R+=Rmet
     
-    error.append(np.abs(diff.R-data.R).sum(axis=1))
+#     error.append(np.abs(diff.R-data.R).sum(axis=1))
+  
+# i=np.argmin(error,axis=0)
 
-# i=np.array([32, 89, 43, 63, 55, 52, 85, 59, 79, 72, 49, 76, 65])  #Result of above optimization (zhop=np.linspace(-11.2,-10,101))
-
-i=np.argmin(error,axis=0)
+i=np.array([28, 89, 47, 63, 55, 52, 85, 57, 79, 72, 49, 76, 65]) #Result of above optimization (zhop=np.linspace(-11.2,-10,101))
 z=zhop[i]
 
 
 S2=z2lib.z2S2(z)
-
-
 
 
 Rmet=linear_ex(data.sens.z,data.sens.rhoz,z)*(8/9-1+S2)+\
@@ -72,23 +70,25 @@ out.R+=diff.R/9     #Contrbution from other motion
 
 exp.append_data(out)
 
+n=9
+
 
 # sim=pyDR.Project('Frames')['Avg_chi_hop>side_chain_chi']['HETs_MET_4pw']['no_opt'][0]
-sim=pyDR.Project('methyl')['Avg_methylCC>LF']['no_opt'][0]
+sim=pyDR.Project('methyl')['Avg_AvOb_methylCC>LF']['no_opt'][0]
 target=out.sens.rhoz
-sim.detect.r_auto(10,Normalization='I')
+sim.detect.r_auto(n,Normalization='I')
 # target=np.concatenate((sim.detect.rhoz[:3],target[1:4],sim.detect.rhoz[6:]))
 # sim.detect.r_target(target)
 sim=sim.fit().opt2dist(rhoz_cleanup=True)
 
-sim1=pyDR.Project('frames')['Avg_chi_hop>side_chain_chi']['HETs_MET_4pw']['no_opt'][0]
+sim1=pyDR.Project('frames_s')['Avg_AvOb_chi_hop>side_chain_chi']['HETs_MET_4pw_SegB']['no_opt'][0]
 # sim1.detect.r_target(target)
-sim1.detect.r_auto(10)
+sim1.detect.r_auto(n)
 sim1=sim1.fit().opt2dist(rhoz_cleanup=True)
 
 # sim=pyDR.Project('proj_md')['OuterHop'][1]
 
-from Fig3C_plot_chi_pop import load_md
+from Fig4_plot_chi_pop import load_md
 _,md_corr=load_md()
 
 def plot_residue(resid,ax=None):
@@ -106,6 +106,8 @@ def plot_residue(resid,ax=None):
         z=[-11.45,*sim.sens.info['z0'][1:]]     
         if label[3:]=='Ile':
             index=[lbl[:3]==label[:3] and lbl[4:6]=='CD' for lbl in sim.label]
+        elif ',' in label:
+            index=[lbl[:3] in [lbl0[:3] for lbl0 in label.split(',')] for lbl in sim.label]
         else:
             index=[lbl[:3]==label[:3] for lbl in sim.label]
         R=sim.R[index].mean(axis=0)

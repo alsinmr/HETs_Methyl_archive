@@ -29,7 +29,7 @@ proj.chimera.saved_commands=['~show','ribbon /B','turn y -105','turn z 10',
                              'lighting soft','graphics silhouettes true'] #These commands always executed
 
 
-sub=proj['HETs_MET_4pw']-proj['Product']-proj['OuterHop']+proj['NMR']
+sub=proj['HETs_MET_4pw_SegB']-proj['Product']-proj['OuterHop']+proj['NMR']
 
 for d in sub:
     for k in range(4):

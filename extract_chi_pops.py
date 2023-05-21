@@ -12,8 +12,8 @@ import numpy as np
 
 vft=pyDR.MDtools.vft
 
-
-trajs=['HETs_4pw.xtc','HETs_MET_4pw.xtc']
+topos=['HETs_3chain.pdb','HETs_SegB.pdb']
+trajs=['HETs_4pw.xtc','HETs_MET_4pw_SegB.xtc']
 
 #%% Initial frame analysis
 """
@@ -27,6 +27,7 @@ file that contains all data sets already processed. Then the various if statemen
 md_dir='/Volumes/My Book/HETs/MDSimulation'
 topo='HETs_3chain.pdb'
 
+topos=[os.path.join(os.path.split(md_dir)[0],topo) for topo in topos]
 trajs=[os.path.join(md_dir,traj) for traj in trajs]
 
 
@@ -41,7 +42,7 @@ frames.append({'Type':'side_chain_chi','n_bonds':1,'sigma':.05,**sel})
 frames.append({'Type':'chi_hop','n_bonds':2,'sigma':.05,**sel})
 frames.append({'Type':'side_chain_chi','n_bonds':2,'sigma':.05,**sel})
 
-for traj in trajs:
+for topo,traj in zip(topos,trajs):
     select=pyDR.MolSelect(topo=topo,traj_files=traj)
     select.select_bond(**sel)
     

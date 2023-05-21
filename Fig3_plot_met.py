@@ -7,7 +7,7 @@ Created on Fri Nov 11 16:10:54 2022
 """
 
 import pyDR
-from met_hop_vs_lib import Z2lib
+from met_hop_vs_lib import Z2lib,S2_2_libA
 import numpy as np
 import matplotlib.pyplot as plt
 from pyDR.misc.Averaging import avgData
@@ -15,24 +15,17 @@ from pyDR.Fitting.fit import model_free
 
 #%% Lib vs. Hop
 "First we make the plot fitting sigma (methyl libration) to tau_met (methyl hopping)"
-z2lib=Z2lib()
-z2lib.plot()
+z2lib=Z2lib()  
+z2lib.plot()  #Shows the MD-derived relationship between methyl libr. amplitude and methyl hopping rate
 
 
-data=pyDR.Project('directHC')['NMR']['proc'][0]
+data=pyDR.Project('directHC')['NMR']['proc'][0]  #Processed experimental data
+z,sigma,z0=z2lib.fit2z_sigma(data)   #This 
 
-
-"Below is the result of the optimization in Fig4_chi_dist"
-i=np.array([32, 89, 43, 63, 55, 52, 85, 59, 79, 72, 49, 76, 65])  #Result of above optimization (zhop=np.linspace(-11.2,-10,101))
 zhop=np.linspace(-11.2,-10,101)
+i=np.array([27, 89, 47, 63, 55, 52, 85, 57, 79, 72, 49, 76, 65])
+
 z=zhop[i]
-sigma=z2lib.z2lib(z)
-S2=z2lib.z2S2(z)
-
-
-# z,sigma,z0=z2lib.fit2z_sigma(data)  #This is an alternative way to get z. Slightly less accurate
-
-
 
 fig=plt.figure()
 ax=[fig.add_subplot(1,2,k+1) for k in range(2)]
@@ -47,11 +40,11 @@ ax[0].set_xticks(range(len(z)))
 ax[0].set_xticklabels(data.label,rotation=90)
 ax[0].set_xlabel('Residue')
 ax[0].set_ylabel(r'$\tau_\mathrm{met}$ / ps')
-ax[1].bar(range(len(sigma)),sigma)
+ax[1].bar(range(len(sigma)),1-S2_2_libA.sigma2S2(sigma))
 ax[1].set_xticks(range(len(z)))
 ax[1].set_xticklabels(data.label,rotation=90)
 ax[1].set_xlabel('Residue')
-ax[1].set_ylabel(r'$\sigma$ / $^\circ$')
+ax[1].set_ylabel(r'$1-S^2_\mathrm{lib.}$')
 fig.set_size_inches([9.7,6.6])
 fig.tight_layout()
 
@@ -67,7 +60,7 @@ for label in data.label:
             index.append(i0[1])
     else:
         index.append(i0[0])
-index[9]=[28, 29, 30, 31, 34, 35]
+index[9]=[28, 29, 30, 31, 34, 35]  #This is where we have 3 overlapping resonances in the NMR data
 
 sim=np.sum(avgData(sim,index))
 
@@ -78,8 +71,10 @@ for zmd0,m in zip(zmd,['o','x']):
 ax[0].legend(('Exper.','methyl corr.','w/o methyl corr.'))
 
 
+
 #%% Plot in chimera
 
+# First we show the experimental data
 minz=z.min()
 maxz=z.max()
 znorm=(z-maxz)/(minz-maxz)
@@ -88,12 +83,17 @@ data.select.chimera(x=znorm)
 data.project.chimera.command_line(['~show','show /B:'+','.join([str(res) for res in resids]),
                                    'ribbon /B','lighting soft','graphics silhouettes true'])
 
+# data.project.chimera.savefig('methyl_rot.png',options='transparentBackground true')  #Save figure
 
-
-znorm=(zmd[0]-maxz)/(minz-maxz)
-sim[0].select.chimera(x=znorm)
+# This is the simulated result (not shown in paper)
+znorm_md=(zmd[0]-maxz)/(minz-maxz)   #note, this recycles the normalization from the experimental results, so is directly comparable
+sim[0].select.chimera(x=znorm_md)
 sim.chimera.command_line(['~show','show /B:'+','.join([str(res) for res in resids]),
                                    'ribbon /B','lighting soft','graphics silhouettes true'])
 
 
 #%% Here we verify that this approach works 
+"First we make the plot fitting sigma (methyl libration) to tau_met (methyl hopping)"
+z2lib=Z2lib()
+z2lib.plot()
+    
