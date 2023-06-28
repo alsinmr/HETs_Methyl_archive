@@ -1,0 +1,160 @@
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o8:FRAMES:Direct:HETs_4pw
+additional_info:	Direct
+filename:	o8_FRAMES_Direct_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o8:FRAMES:Product:HETs_4pw
+additional_info:	Product
+filename:	o8_FRAMES_Product_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o8:FRAMES:MetLib:HETs_4pw
+additional_info:	MetLib
+filename:	o8_FRAMES_MetLib_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o8:FRAMES:MetHop:HETs_4pw
+additional_info:	MetHop
+filename:	o8_FRAMES_MetHop_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o8:FRAMES:Chi2Lib:HETs_4pw
+additional_info:	Chi2Lib
+filename:	o8_FRAMES_Chi2Lib_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o8:FRAMES:Chi2Hop:HETs_4pw
+additional_info:	Chi2Hop
+filename:	o8_FRAMES_Chi2Hop_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o8:FRAMES:Chi1Lib:HETs_4pw
+additional_info:	Chi1Lib
+filename:	o8_FRAMES_Chi1Lib_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o8:FRAMES:Chi1Hop:HETs_4pw
+additional_info:	Chi1Hop
+filename:	o8_FRAMES_Chi1Hop_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o8:FRAMES:CaCb:HETs_4pw
+additional_info:	CaCb
+filename:	o8_FRAMES_CaCb_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o8:FRAMES:OuterHop:HETs_4pw
+additional_info:	OuterHop
+filename:	o8_FRAMES_OuterHop_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o8:FRAMES:Direct:HETs_MET_4pw_SegB
+additional_info:	Direct
+filename:	o8_FRAMES_Direct_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o8:FRAMES:Product:HETs_MET_4pw_SegB
+additional_info:	Product
+filename:	o8_FRAMES_Product_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o8:FRAMES:MetLib:HETs_MET_4pw_SegB
+additional_info:	MetLib
+filename:	o8_FRAMES_MetLib_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o8:FRAMES:MetHop:HETs_MET_4pw_SegB
+additional_info:	MetHop
+filename:	o8_FRAMES_MetHop_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o8:FRAMES:Chi2Lib:HETs_MET_4pw_SegB
+additional_info:	Chi2Lib
+filename:	o8_FRAMES_Chi2Lib_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o8:FRAMES:Chi2Hop:HETs_MET_4pw_SegB
+additional_info:	Chi2Hop
+filename:	o8_FRAMES_Chi2Hop_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o8:FRAMES:Chi1Lib:HETs_MET_4pw_SegB
+additional_info:	Chi1Lib
+filename:	o8_FRAMES_Chi1Lib_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o8:FRAMES:Chi1Hop:HETs_MET_4pw_SegB
+additional_info:	Chi1Hop
+filename:	o8_FRAMES_Chi1Hop_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o8:FRAMES:CaCb:HETs_MET_4pw_SegB
+additional_info:	CaCb
+filename:	o8_FRAMES_CaCb_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o8:FRAMES:OuterHop:HETs_MET_4pw_SegB
+additional_info:	OuterHop
+filename:	o8_FRAMES_OuterHop_HETs_MET_4pw_SegB.data
+END:DATA

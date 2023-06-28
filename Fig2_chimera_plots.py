@@ -6,16 +6,16 @@ Created on Thu Aug 11 14:15:43 2022
 @author: albertsmith
 """
 
+"""
+This creates the plots for Figure 2 and SI Figures 4-8
+"""
 
-# Run script in directory HETs_Methyl_archive
 
-import sys
-sys.path.append('/Users/albertsmith/Documents/GitHub/')
 import pyDR
 import os
 
-proj=pyDR.Project('proj_exp')
-exp=pyDR.Project('directHC')['NMR']['proc'][0]
+proj=pyDR.Project('Projects/proj_exp')
+exp=pyDR.Project('Projects/directHC')['NMR']['proc'][0]
 exp.src_data=None
 proj.append_data(exp)
 #Set up file storage
@@ -49,5 +49,6 @@ for d in sub:
         proj.chimera.savefig(filename.format(title,k),'transparentBackground True')
 
 #%% Plot frames validation
-proj['HETs_MET_4pw']['Direct'].plot(style='bar')
-proj['HETs_MET_4pw']['Product'].plot()
+"SI Figure 4"
+proj['HETs_MET_4pw_SegB']['Direct'].plot(style='bar')
+proj['HETs_MET_4pw_SegB']['Product'].plot()

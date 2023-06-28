@@ -24,8 +24,24 @@ remove our ability to re-process some of this data
 """
 
 
-proj=pyDR.Project('frames',create=True)
-proj_s=pyDR.Project('frames_s',create=True)
+"""
+The 10 microsecond trajectories sampled every 5 ps create some challenges for
+data analysis, mainly that there are 2000000 time points. We do not really need
+to process all points simultaneously, so we have two projects here. The first,
+proj, takes the trajectory in five chunks, each sampled every 5 ps for 2 
+microseconds. This is used for analyzing faster, sub-microsecond motion. The 
+second, proj_s, also takes the trajectory in five chunks, only takes every
+fifth time point for the full 10 microseconds. This is repeated five times, 
+starting with time point 0,1,2,3, and 4. This project is used for analyzing
+slow motion, where only taking every fifth point causes us to lose information
+about fast motion.
+
+Note that this chunking is only done for HETs_MET_4pw_SegB, for which we have
+10 microseconds of simulation, but not for HETs_4pw, which only contains 2 
+microseconds of simulation
+"""
+proj=pyDR.Project('Project/frames',create=True)
+proj_s=pyDR.Project('Project/frames_s',create=True)
 
 
 md_dir='/Volumes/My Book/HETs/'
@@ -163,7 +179,7 @@ outer_ind=np.array([(resname in ['ILE','LEU'] and 'CD' in name) or (resname in '
                     for resname,name in zip(resnames,names)],dtype=bool)
 
 for sub_str,proj_title,Proj in zip(sub_strs,proj_titles,proj0):
-    proj2=pyDR.Project(proj_title,create=True)
+    proj2=pyDR.Project(os.path.join('Projects',proj_title),create=True)
     if len(proj2)<20:
         for traj in trajs:
             sub=Proj[sub_str][os.path.split(traj)[1].split('.')[0]]  #18 data sets (either optimized for MD or for comparison to experiment)

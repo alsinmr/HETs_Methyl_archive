@@ -32,11 +32,11 @@ class S_v_pop():
         
         
         #Tensors for each of three states
-        theta=np.arccos(np.sqrt(1/3))*2 #Tetrahedral angle
+        theta=np.arccos(-1/3) #Tetrahedral angle
         A0=vft.D2(0,[theta,theta,theta],[0,2*np.pi/3,4*np.pi/3])
         
         #Solve for p3=0
-        self.p1=np.linspace(0,1,101)
+        self.p1=np.linspace(0,1,301)
         self.p2,self.p3=1-self.p1,np.zeros(self.p1.shape)
         
         A=np.array([sum([p*a for p,a in zip([self.p1,self.p2,self.p3],A)]) for A in A0])  #Residual tensor
@@ -63,15 +63,32 @@ class S_v_pop():
         """
         ax=plt.figure().add_subplot(111)
         
-        ax.plot(self.p1,self.S,color='red')
-        ax.plot(self.p1,self.Seq,color='blue')
+        # ax.plot(self.p1,self.S,color='red')
+        # ax.plot(self.p1,self.Seq,color='blue')
         
-        ax.plot(self.p1,np.abs(self.S),color='red',linestyle=':')
-        ax.plot(self.p1,np.abs(self.Seq),color='blue',linestyle=':')
+        # ax.plot(self.p1,np.abs(self.S),color='red',linestyle=':')
+        # ax.plot(self.p1,np.abs(self.Seq),color='blue',linestyle=':')
         
-        ax.legend((r'$p_3$=0',r'$p_2=p_3$'))
-        ax.set_xlabel(r'$p_1$')
-        ax.set_ylabel(r'S')
+        # ax.legend((r'$p_3$=0',r'$p_2=p_3$'))
+        # ax.set_xlabel(r'$p_1$')
+        # ax.set_ylabel(r'S')
+        
+        cmap=plt.get_cmap('tab10')
+        
+        half=len(self.p1)//2
+        ax.plot(self.p1[half:],self.S[half:],color=cmap(0))
+        third=len(self.p1)//3
+        ax.plot(self.p1[third:half],self.Seq[third:half],color=cmap(1))
+        ax.plot(self.p2eq[1:third],self.Seq[1:third],color=cmap(6))
+        ax.plot(self.p1[half:],self.Seq[half:],color=cmap(1))
+        ax.plot(self.p1[third:],np.abs(self.Seq[third:]),color=cmap(1),linestyle=':')
+        ax.plot(self.p2eq[:third],np.abs(self.Seq[:third]),color=cmap(6),linestyle=':')
+        
+        ax.legend((r'$p_3=0$',r'$p_2=p_3$',r'$p_1=p_2$'))
+        ax.set_xlabel(r'major population ($p_1$)')
+        ax.set_ylabel(r'$S_\mathrm{rotamer}$')
+        ax.set_xlim([0,1])
+        ax.set_ylim([-.5,1])
         
     def get_pop(self,S):
         """
@@ -235,7 +252,7 @@ if __name__=='__main__':
     
     
     #Read in NMR results and residues
-    data=pyDR.Project('directHC')['NMR']['raw']
+    data=pyDR.Project('Projects/directHC')['NMR']['raw']
     S=data.S2**(0.5)*3  #Remove methyl contribution
     resids=[int(lbl[:3]) if len(lbl.split(','))==1 else [int(l0[:3]) for l0 in lbl.split(',')] \
             for lbl in data.label]   

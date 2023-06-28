@@ -12,9 +12,8 @@ from pyDR.Fitting.fit import model_free
 from pyDR.misc.tools import linear_ex
 import matplotlib.pyplot as plt
 from scipy.optimize import leastsq
-from pyDR.misc.Averaging import avgData
 
-frames=pyDR.Project('proj_md')
+frames=pyDR.Project('Projects/proj_md')
 sub=frames['HETs_MET_4pw_SegB']['.+Met']
 
 
@@ -45,7 +44,7 @@ class S2_2_libA():
         """
         sigma0=np.atleast_2d(np.linspace(1,60,60))
         theta=np.atleast_2d(np.linspace(-180,180,201)).T
-        P2=1/27*(32*np.cos(sigma0*np.pi/180)**2+8*np.cos(sigma0*np.pi/180)-13)
+        P2=1/27*(32*np.cos(theta*np.pi/180)**2+8*np.cos(theta*np.pi/180)-13)
         prob=np.exp(-(theta**2)@(1/(2*sigma0**2)))
         prob[:,0]=0
         prob[100,0]=1
@@ -175,6 +174,8 @@ class Z2lib():
         ax[1].set_xticklabels([None if k%2 else '{:.0f} ps'.format(10**v*1e12) for k,v in enumerate(ax[0].get_xticks())])
         ax[1].set_xlabel(r'$\tau_c$')
         ax[1].set_ylabel(r'$1/\sigma^2 / (^\circ)^{-2}$')
+        pos=ax[1].get_xlim()[0]+np.diff(ax[1].get_xlim())*.1,ax[1].get_ylim()[1]-np.diff(ax[1].get_ylim())*.1
+        ax[1].text(*pos,r'$1/\sigma^2$ = '+f'{self.b[1][0]:.4f}'+r'$*\log{\tau_c}$ + '+f'{self.b[0][0]:.3f}')
         fig.set_size_inches([8.5,4])
         fig.tight_layout()
         

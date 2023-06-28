@@ -1,0 +1,1152 @@
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_4pw.xtc
+title:	n20:FRAMES:Direct:HETs_4pw
+additional_info:	Direct
+filename:	n20_FRAMES_Direct_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_4pw.xtc
+title:	n20:FRAMES:Product:HETs_4pw
+additional_info:	Product
+filename:	n20_FRAMES_Product_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_4pw.xtc
+title:	n20:FRAMES:PAS>hops_3site:HETs_4pw
+additional_info:	PAS>hops_3site
+filename:	n20_FRAMES_PAS_hops_3site_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_4pw.xtc
+title:	n20:FRAMES:hops_3site>methylCC:HETs_4pw
+additional_info:	hops_3site>methylCC
+filename:	n20_FRAMES_hops_3site_methylCC_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_4pw.xtc
+title:	n20:FRAMES:methylCC>chi_hop:HETs_4pw
+additional_info:	methylCC>chi_hop
+filename:	n20_FRAMES_methylCC_chi_hop_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_4pw.xtc
+title:	n20:FRAMES:chi_hop>side_chain_chi:HETs_4pw
+additional_info:	chi_hop>side_chain_chi
+filename:	n20_FRAMES_chi_hop_side_chain_chi_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_4pw.xtc
+title:	n20:FRAMES:side_chain_chi>chi_hop:HETs_4pw
+additional_info:	side_chain_chi>chi_hop
+filename:	n20_FRAMES_side_chain_chi_chi_hop_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_4pw.xtc
+title:	n20:FRAMES:chi_hop>side_chain_chi:HETs_4pw
+additional_info:	chi_hop>side_chain_chi
+filename:	n20_FRAMES_chi_hop_side_chain_chi_HETs_4pw1.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_4pw.xtc
+title:	n20:FRAMES:side_chain_chi>LF:HETs_4pw
+additional_info:	side_chain_chi>LF
+filename:	n20_FRAMES_side_chain_chi_LF_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	n15:FRAMES:AvOb_Direct:HETs_MET_4pw_SegB
+additional_info:	AvOb_Direct
+filename:	n15_FRAMES_Direct_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	n15:FRAMES:AvOb_Product:HETs_MET_4pw_SegB
+additional_info:	AvOb_Product
+filename:	n15_FRAMES_Product_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	n15:FRAMES:AvOb_PAS>hops_3site:HETs_MET_4pw_SegB
+additional_info:	AvOb_PAS>hops_3site
+filename:	n15_FRAMES_PAS_hops_3site_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	n15:FRAMES:AvOb_hops_3site>methylCC:HETs_MET_4pw_SegB
+additional_info:	AvOb_hops_3site>methylCC
+filename:	n15_FRAMES_hops_3site_methylCC_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	n15:FRAMES:AvOb_methylCC>chi_hop:HETs_MET_4pw_SegB
+additional_info:	AvOb_methylCC>chi_hop
+filename:	n15_FRAMES_methylCC_chi_hop_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	n15:FRAMES:AvOb_chi_hop>side_chain_chi:HETs_MET_4pw_SegB
+additional_info:	AvOb_chi_hop>side_chain_chi
+filename:	n15_FRAMES_chi_hop_side_chain_chi_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	n15:FRAMES:AvOb_side_chain_chi>chi_hop:HETs_MET_4pw_SegB
+additional_info:	AvOb_side_chain_chi>chi_hop
+filename:	n15_FRAMES_side_chain_chi_chi_hop_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	n15:FRAMES:AvOb_chi_hop>side_chain_chi:HETs_MET_4pw_SegB
+additional_info:	AvOb_chi_hop>side_chain_chi
+filename:	n15_FRAMES_chi_hop_side_chain_chi_HETs_MET_4pw_SegB1.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	n15:FRAMES:AvOb_side_chain_chi>LF:HETs_MET_4pw_SegB
+additional_info:	AvOb_side_chain_chi>LF
+filename:	n15_FRAMES_side_chain_chi_LF_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_4pw.xtc
+title:	n20:FRAMES:Avg_Direct:HETs_4pw
+additional_info:	Avg_Direct
+filename:	n20_FRAMES_Direct_HETs_4pw1.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_4pw.xtc
+title:	n20:FRAMES:Avg_Product:HETs_4pw
+additional_info:	Avg_Product
+filename:	n20_FRAMES_Product_HETs_4pw1.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_4pw.xtc
+title:	n20:FRAMES:Avg_PAS>hops_3site:HETs_4pw
+additional_info:	Avg_PAS>hops_3site
+filename:	n20_FRAMES_PAS_hops_3site_HETs_4pw1.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_4pw.xtc
+title:	n20:FRAMES:Avg_hops_3site>methylCC:HETs_4pw
+additional_info:	Avg_hops_3site>methylCC
+filename:	n20_FRAMES_hops_3site_methylCC_HETs_4pw1.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_4pw.xtc
+title:	n20:FRAMES:Avg_methylCC>chi_hop:HETs_4pw
+additional_info:	Avg_methylCC>chi_hop
+filename:	n20_FRAMES_methylCC_chi_hop_HETs_4pw1.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_4pw.xtc
+title:	n20:FRAMES:Avg_chi_hop>side_chain_chi:HETs_4pw
+additional_info:	Avg_chi_hop>side_chain_chi
+filename:	n20_FRAMES_chi_hop_side_chain_chi_HETs_4pw2.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_4pw.xtc
+title:	n20:FRAMES:Avg_side_chain_chi>chi_hop:HETs_4pw
+additional_info:	Avg_side_chain_chi>chi_hop
+filename:	n20_FRAMES_side_chain_chi_chi_hop_HETs_4pw1.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_4pw.xtc
+title:	n20:FRAMES:Avg_chi_hop>side_chain_chi:HETs_4pw
+additional_info:	Avg_chi_hop>side_chain_chi
+filename:	n20_FRAMES_chi_hop_side_chain_chi_HETs_4pw11.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_4pw.xtc
+title:	n20:FRAMES:Avg_side_chain_chi>LF:HETs_4pw
+additional_info:	Avg_side_chain_chi>LF
+filename:	n20_FRAMES_side_chain_chi_LF_HETs_4pw1.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	n15:FRAMES:Avg_AvOb_Direct:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_Direct
+filename:	n15_FRAMES_Direct_HETs_MET_4pw_SegB1.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	n15:FRAMES:Avg_AvOb_Product:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_Product
+filename:	n15_FRAMES_Product_HETs_MET_4pw_SegB1.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	n15:FRAMES:Avg_AvOb_PAS>hops_3site:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_PAS>hops_3site
+filename:	n15_FRAMES_PAS_hops_3site_HETs_MET_4pw_SegB1.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	n15:FRAMES:Avg_AvOb_hops_3site>methylCC:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_hops_3site>methylCC
+filename:	n15_FRAMES_hops_3site_methylCC_HETs_MET_4pw_SegB1.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	n15:FRAMES:Avg_AvOb_methylCC>chi_hop:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_methylCC>chi_hop
+filename:	n15_FRAMES_methylCC_chi_hop_HETs_MET_4pw_SegB1.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	n15:FRAMES:Avg_AvOb_chi_hop>side_chain_chi:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_chi_hop>side_chain_chi
+filename:	n15_FRAMES_chi_hop_side_chain_chi_HETs_MET_4pw_SegB2.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	n15:FRAMES:Avg_AvOb_side_chain_chi>chi_hop:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_side_chain_chi>chi_hop
+filename:	n15_FRAMES_side_chain_chi_chi_hop_HETs_MET_4pw_SegB1.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	n15:FRAMES:Avg_AvOb_chi_hop>side_chain_chi:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_chi_hop>side_chain_chi
+filename:	n15_FRAMES_chi_hop_side_chain_chi_HETs_MET_4pw_SegB11.data
+END:DATA
+DATA
+Type:	Frames
+status:	no_opt
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	n15:FRAMES:Avg_AvOb_side_chain_chi>LF:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_side_chain_chi>LF
+filename:	n15_FRAMES_side_chain_chi_LF_HETs_MET_4pw_SegB1.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p8:FRAMES:Avg_Direct:HETs_4pw
+additional_info:	Avg_Direct
+filename:	p8_FRAMES_Avg_Direct_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p8:FRAMES:Avg_Product:HETs_4pw
+additional_info:	Avg_Product
+filename:	p8_FRAMES_Avg_Product_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p8:FRAMES:Avg_PAS>hops_3site:HETs_4pw
+additional_info:	Avg_PAS>hops_3site
+filename:	p8_FRAMES_Avg_PAS_hops_3site_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p8:FRAMES:Avg_hops_3site>methylCC:HETs_4pw
+additional_info:	Avg_hops_3site>methylCC
+filename:	p8_FRAMES_Avg_hops_3site_methylCC_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p8:FRAMES:Avg_methylCC>chi_hop:HETs_4pw
+additional_info:	Avg_methylCC>chi_hop
+filename:	p8_FRAMES_Avg_methylCC_chi_hop_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p8:FRAMES:Avg_chi_hop>side_chain_chi:HETs_4pw
+additional_info:	Avg_chi_hop>side_chain_chi
+filename:	p8_FRAMES_Avg_chi_hop_side_chain_chi_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p8:FRAMES:Avg_side_chain_chi>chi_hop:HETs_4pw
+additional_info:	Avg_side_chain_chi>chi_hop
+filename:	p8_FRAMES_Avg_side_chain_chi_chi_hop_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p8:FRAMES:Avg_chi_hop>side_chain_chi:HETs_4pw
+additional_info:	Avg_chi_hop>side_chain_chi
+filename:	p8_FRAMES_Avg_chi_hop_side_chain_chi_HETs_4pw1.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p8:FRAMES:Avg_side_chain_chi>LF:HETs_4pw
+additional_info:	Avg_side_chain_chi>LF
+filename:	p8_FRAMES_Avg_side_chain_chi_LF_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p8:FRAMES:Avg_AvOb_Direct:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_Direct
+filename:	p8_FRAMES_Avg_AvOb_Direct_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p8:FRAMES:Avg_AvOb_Product:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_Product
+filename:	p8_FRAMES_Avg_AvOb_Product_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p8:FRAMES:Avg_AvOb_PAS>hops_3site:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_PAS>hops_3site
+filename:	p8_FRAMES_Avg_AvOb_PAS_hops_3site_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p8:FRAMES:Avg_AvOb_hops_3site>methylCC:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_hops_3site>methylCC
+filename:	p8_FRAMES_Avg_AvOb_hops_3site_methylCC_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p8:FRAMES:Avg_AvOb_methylCC>chi_hop:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_methylCC>chi_hop
+filename:	p8_FRAMES_Avg_AvOb_methylCC_chi_hop_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p8:FRAMES:Avg_AvOb_chi_hop>side_chain_chi:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_chi_hop>side_chain_chi
+filename:	p8_FRAMES_Avg_AvOb_chi_hop_side_chain_chi_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p8:FRAMES:Avg_AvOb_side_chain_chi>chi_hop:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_side_chain_chi>chi_hop
+filename:	p8_FRAMES_Avg_AvOb_side_chain_chi_chi_hop_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p8:FRAMES:Avg_AvOb_chi_hop>side_chain_chi:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_chi_hop>side_chain_chi
+filename:	p8_FRAMES_Avg_AvOb_chi_hop_side_chain_chi_HETs_MET_4pw_SegB1.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p8:FRAMES:Avg_AvOb_side_chain_chi>LF:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_side_chain_chi>LF
+filename:	p8_FRAMES_Avg_AvOb_side_chain_chi_LF_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o8:FRAMES:Avg_Direct:HETs_4pw
+additional_info:	Avg_Direct
+filename:	o8_FRAMES_Avg_Direct_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o8:FRAMES:Avg_Product:HETs_4pw
+additional_info:	Avg_Product
+filename:	o8_FRAMES_Avg_Product_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o8:FRAMES:Avg_PAS>hops_3site:HETs_4pw
+additional_info:	Avg_PAS>hops_3site
+filename:	o8_FRAMES_Avg_PAS_hops_3site_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o8:FRAMES:Avg_hops_3site>methylCC:HETs_4pw
+additional_info:	Avg_hops_3site>methylCC
+filename:	o8_FRAMES_Avg_hops_3site_methylCC_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o8:FRAMES:Avg_methylCC>chi_hop:HETs_4pw
+additional_info:	Avg_methylCC>chi_hop
+filename:	o8_FRAMES_Avg_methylCC_chi_hop_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o8:FRAMES:Avg_chi_hop>side_chain_chi:HETs_4pw
+additional_info:	Avg_chi_hop>side_chain_chi
+filename:	o8_FRAMES_Avg_chi_hop_side_chain_chi_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o8:FRAMES:Avg_side_chain_chi>chi_hop:HETs_4pw
+additional_info:	Avg_side_chain_chi>chi_hop
+filename:	o8_FRAMES_Avg_side_chain_chi_chi_hop_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o8:FRAMES:Avg_chi_hop>side_chain_chi:HETs_4pw
+additional_info:	Avg_chi_hop>side_chain_chi
+filename:	o8_FRAMES_Avg_chi_hop_side_chain_chi_HETs_4pw1.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o8:FRAMES:Avg_side_chain_chi>LF:HETs_4pw
+additional_info:	Avg_side_chain_chi>LF
+filename:	o8_FRAMES_Avg_side_chain_chi_LF_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o8:FRAMES:Avg_AvOb_Direct:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_Direct
+filename:	o8_FRAMES_Avg_AvOb_Direct_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o8:FRAMES:Avg_AvOb_Product:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_Product
+filename:	o8_FRAMES_Avg_AvOb_Product_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o8:FRAMES:Avg_AvOb_PAS>hops_3site:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_PAS>hops_3site
+filename:	o8_FRAMES_Avg_AvOb_PAS_hops_3site_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o8:FRAMES:Avg_AvOb_hops_3site>methylCC:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_hops_3site>methylCC
+filename:	o8_FRAMES_Avg_AvOb_hops_3site_methylCC_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o8:FRAMES:Avg_AvOb_methylCC>chi_hop:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_methylCC>chi_hop
+filename:	o8_FRAMES_Avg_AvOb_methylCC_chi_hop_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o8:FRAMES:Avg_AvOb_chi_hop>side_chain_chi:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_chi_hop>side_chain_chi
+filename:	o8_FRAMES_Avg_AvOb_chi_hop_side_chain_chi_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o8:FRAMES:Avg_AvOb_side_chain_chi>chi_hop:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_side_chain_chi>chi_hop
+filename:	o8_FRAMES_Avg_AvOb_side_chain_chi_chi_hop_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o8:FRAMES:Avg_AvOb_chi_hop>side_chain_chi:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_chi_hop>side_chain_chi
+filename:	o8_FRAMES_Avg_AvOb_chi_hop_side_chain_chi_HETs_MET_4pw_SegB1.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o8:FRAMES:Avg_AvOb_side_chain_chi>LF:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_side_chain_chi>LF
+filename:	o8_FRAMES_Avg_AvOb_side_chain_chi_LF_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p12:FRAMES:Avg_Direct:HETs_4pw
+additional_info:	Avg_Direct
+filename:	p12_FRAMES_Avg_Direct_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p12:FRAMES:Avg_Product:HETs_4pw
+additional_info:	Avg_Product
+filename:	p12_FRAMES_Avg_Product_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p12:FRAMES:Avg_PAS>hops_3site:HETs_4pw
+additional_info:	Avg_PAS>hops_3site
+filename:	p12_FRAMES_Avg_PAS_hops_3site_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p12:FRAMES:Avg_hops_3site>methylCC:HETs_4pw
+additional_info:	Avg_hops_3site>methylCC
+filename:	p12_FRAMES_Avg_hops_3site_methylCC_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p12:FRAMES:Avg_methylCC>chi_hop:HETs_4pw
+additional_info:	Avg_methylCC>chi_hop
+filename:	p12_FRAMES_Avg_methylCC_chi_hop_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p12:FRAMES:Avg_chi_hop>side_chain_chi:HETs_4pw
+additional_info:	Avg_chi_hop>side_chain_chi
+filename:	p12_FRAMES_Avg_chi_hop_side_chain_chi_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p12:FRAMES:Avg_side_chain_chi>chi_hop:HETs_4pw
+additional_info:	Avg_side_chain_chi>chi_hop
+filename:	p12_FRAMES_Avg_side_chain_chi_chi_hop_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p12:FRAMES:Avg_chi_hop>side_chain_chi:HETs_4pw
+additional_info:	Avg_chi_hop>side_chain_chi
+filename:	p12_FRAMES_Avg_chi_hop_side_chain_chi_HETs_4pw1.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p12:FRAMES:Avg_side_chain_chi>LF:HETs_4pw
+additional_info:	Avg_side_chain_chi>LF
+filename:	p12_FRAMES_Avg_side_chain_chi_LF_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p12:FRAMES:Avg_AvOb_Direct:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_Direct
+filename:	p12_FRAMES_Avg_AvOb_Direct_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p12:FRAMES:Avg_AvOb_Product:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_Product
+filename:	p12_FRAMES_Avg_AvOb_Product_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p12:FRAMES:Avg_AvOb_PAS>hops_3site:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_PAS>hops_3site
+filename:	p12_FRAMES_Avg_AvOb_PAS_hops_3site_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p12:FRAMES:Avg_AvOb_hops_3site>methylCC:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_hops_3site>methylCC
+filename:	p12_FRAMES_Avg_AvOb_hops_3site_methylCC_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p12:FRAMES:Avg_AvOb_methylCC>chi_hop:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_methylCC>chi_hop
+filename:	p12_FRAMES_Avg_AvOb_methylCC_chi_hop_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p12:FRAMES:Avg_AvOb_chi_hop>side_chain_chi:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_chi_hop>side_chain_chi
+filename:	p12_FRAMES_Avg_AvOb_chi_hop_side_chain_chi_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p12:FRAMES:Avg_AvOb_side_chain_chi>chi_hop:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_side_chain_chi>chi_hop
+filename:	p12_FRAMES_Avg_AvOb_side_chain_chi_chi_hop_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p12:FRAMES:Avg_AvOb_chi_hop>side_chain_chi:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_chi_hop>side_chain_chi
+filename:	p12_FRAMES_Avg_AvOb_chi_hop_side_chain_chi_HETs_MET_4pw_SegB1.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p12:FRAMES:Avg_AvOb_side_chain_chi>LF:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_side_chain_chi>LF
+filename:	p12_FRAMES_Avg_AvOb_side_chain_chi_LF_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o12:FRAMES:Avg_Direct:HETs_4pw
+additional_info:	Avg_Direct
+filename:	o12_FRAMES_Avg_Direct_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o12:FRAMES:Avg_Product:HETs_4pw
+additional_info:	Avg_Product
+filename:	o12_FRAMES_Avg_Product_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o12:FRAMES:Avg_PAS>hops_3site:HETs_4pw
+additional_info:	Avg_PAS>hops_3site
+filename:	o12_FRAMES_Avg_PAS_hops_3site_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o12:FRAMES:Avg_hops_3site>methylCC:HETs_4pw
+additional_info:	Avg_hops_3site>methylCC
+filename:	o12_FRAMES_Avg_hops_3site_methylCC_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o12:FRAMES:Avg_methylCC>chi_hop:HETs_4pw
+additional_info:	Avg_methylCC>chi_hop
+filename:	o12_FRAMES_Avg_methylCC_chi_hop_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o12:FRAMES:Avg_chi_hop>side_chain_chi:HETs_4pw
+additional_info:	Avg_chi_hop>side_chain_chi
+filename:	o12_FRAMES_Avg_chi_hop_side_chain_chi_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o12:FRAMES:Avg_side_chain_chi>chi_hop:HETs_4pw
+additional_info:	Avg_side_chain_chi>chi_hop
+filename:	o12_FRAMES_Avg_side_chain_chi_chi_hop_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o12:FRAMES:Avg_chi_hop>side_chain_chi:HETs_4pw
+additional_info:	Avg_chi_hop>side_chain_chi
+filename:	o12_FRAMES_Avg_chi_hop_side_chain_chi_HETs_4pw1.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o12:FRAMES:Avg_side_chain_chi>LF:HETs_4pw
+additional_info:	Avg_side_chain_chi>LF
+filename:	o12_FRAMES_Avg_side_chain_chi_LF_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o12:FRAMES:Avg_AvOb_Direct:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_Direct
+filename:	o12_FRAMES_Avg_AvOb_Direct_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o12:FRAMES:Avg_AvOb_Product:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_Product
+filename:	o12_FRAMES_Avg_AvOb_Product_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o12:FRAMES:Avg_AvOb_PAS>hops_3site:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_PAS>hops_3site
+filename:	o12_FRAMES_Avg_AvOb_PAS_hops_3site_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o12:FRAMES:Avg_AvOb_hops_3site>methylCC:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_hops_3site>methylCC
+filename:	o12_FRAMES_Avg_AvOb_hops_3site_methylCC_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o12:FRAMES:Avg_AvOb_methylCC>chi_hop:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_methylCC>chi_hop
+filename:	o12_FRAMES_Avg_AvOb_methylCC_chi_hop_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o12:FRAMES:Avg_AvOb_chi_hop>side_chain_chi:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_chi_hop>side_chain_chi
+filename:	o12_FRAMES_Avg_AvOb_chi_hop_side_chain_chi_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o12:FRAMES:Avg_AvOb_side_chain_chi>chi_hop:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_side_chain_chi>chi_hop
+filename:	o12_FRAMES_Avg_AvOb_side_chain_chi_chi_hop_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o12:FRAMES:Avg_AvOb_chi_hop>side_chain_chi:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_chi_hop>side_chain_chi
+filename:	o12_FRAMES_Avg_AvOb_chi_hop_side_chain_chi_HETs_MET_4pw_SegB1.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o12:FRAMES:Avg_AvOb_side_chain_chi>LF:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_side_chain_chi>LF
+filename:	o12_FRAMES_Avg_AvOb_side_chain_chi_LF_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p13:FRAMES:Avg_Direct:HETs_4pw
+additional_info:	Avg_Direct
+filename:	p13_FRAMES_Avg_Direct_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p13:FRAMES:Avg_Product:HETs_4pw
+additional_info:	Avg_Product
+filename:	p13_FRAMES_Avg_Product_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p13:FRAMES:Avg_PAS>hops_3site:HETs_4pw
+additional_info:	Avg_PAS>hops_3site
+filename:	p13_FRAMES_Avg_PAS_hops_3site_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p13:FRAMES:Avg_hops_3site>methylCC:HETs_4pw
+additional_info:	Avg_hops_3site>methylCC
+filename:	p13_FRAMES_Avg_hops_3site_methylCC_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p13:FRAMES:Avg_methylCC>chi_hop:HETs_4pw
+additional_info:	Avg_methylCC>chi_hop
+filename:	p13_FRAMES_Avg_methylCC_chi_hop_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p13:FRAMES:Avg_chi_hop>side_chain_chi:HETs_4pw
+additional_info:	Avg_chi_hop>side_chain_chi
+filename:	p13_FRAMES_Avg_chi_hop_side_chain_chi_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p13:FRAMES:Avg_side_chain_chi>chi_hop:HETs_4pw
+additional_info:	Avg_side_chain_chi>chi_hop
+filename:	p13_FRAMES_Avg_side_chain_chi_chi_hop_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p13:FRAMES:Avg_chi_hop>side_chain_chi:HETs_4pw
+additional_info:	Avg_chi_hop>side_chain_chi
+filename:	p13_FRAMES_Avg_chi_hop_side_chain_chi_HETs_4pw1.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_4pw.xtc
+title:	p13:FRAMES:Avg_side_chain_chi>LF:HETs_4pw
+additional_info:	Avg_side_chain_chi>LF
+filename:	p13_FRAMES_Avg_side_chain_chi_LF_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p13:FRAMES:Avg_AvOb_Direct:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_Direct
+filename:	p13_FRAMES_Avg_AvOb_Direct_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p13:FRAMES:Avg_AvOb_Product:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_Product
+filename:	p13_FRAMES_Avg_AvOb_Product_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p13:FRAMES:Avg_AvOb_PAS>hops_3site:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_PAS>hops_3site
+filename:	p13_FRAMES_Avg_AvOb_PAS_hops_3site_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p13:FRAMES:Avg_AvOb_hops_3site>methylCC:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_hops_3site>methylCC
+filename:	p13_FRAMES_Avg_AvOb_hops_3site_methylCC_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p13:FRAMES:Avg_AvOb_methylCC>chi_hop:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_methylCC>chi_hop
+filename:	p13_FRAMES_Avg_AvOb_methylCC_chi_hop_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p13:FRAMES:Avg_AvOb_chi_hop>side_chain_chi:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_chi_hop>side_chain_chi
+filename:	p13_FRAMES_Avg_AvOb_chi_hop_side_chain_chi_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p13:FRAMES:Avg_AvOb_side_chain_chi>chi_hop:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_side_chain_chi>chi_hop
+filename:	p13_FRAMES_Avg_AvOb_side_chain_chi_chi_hop_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p13:FRAMES:Avg_AvOb_chi_hop>side_chain_chi:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_chi_hop>side_chain_chi
+filename:	p13_FRAMES_Avg_AvOb_chi_hop_side_chain_chi_HETs_MET_4pw_SegB1.data
+END:DATA
+DATA
+Type:	Frames
+status:	proc
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	p13:FRAMES:Avg_AvOb_side_chain_chi>LF:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_side_chain_chi>LF
+filename:	p13_FRAMES_Avg_AvOb_side_chain_chi_LF_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o13:FRAMES:Avg_Direct:HETs_4pw
+additional_info:	Avg_Direct
+filename:	o13_FRAMES_Avg_Direct_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o13:FRAMES:Avg_Product:HETs_4pw
+additional_info:	Avg_Product
+filename:	o13_FRAMES_Avg_Product_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o13:FRAMES:Avg_PAS>hops_3site:HETs_4pw
+additional_info:	Avg_PAS>hops_3site
+filename:	o13_FRAMES_Avg_PAS_hops_3site_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o13:FRAMES:Avg_hops_3site>methylCC:HETs_4pw
+additional_info:	Avg_hops_3site>methylCC
+filename:	o13_FRAMES_Avg_hops_3site_methylCC_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o13:FRAMES:Avg_methylCC>chi_hop:HETs_4pw
+additional_info:	Avg_methylCC>chi_hop
+filename:	o13_FRAMES_Avg_methylCC_chi_hop_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o13:FRAMES:Avg_chi_hop>side_chain_chi:HETs_4pw
+additional_info:	Avg_chi_hop>side_chain_chi
+filename:	o13_FRAMES_Avg_chi_hop_side_chain_chi_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o13:FRAMES:Avg_side_chain_chi>chi_hop:HETs_4pw
+additional_info:	Avg_side_chain_chi>chi_hop
+filename:	o13_FRAMES_Avg_side_chain_chi_chi_hop_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o13:FRAMES:Avg_chi_hop>side_chain_chi:HETs_4pw
+additional_info:	Avg_chi_hop>side_chain_chi
+filename:	o13_FRAMES_Avg_chi_hop_side_chain_chi_HETs_4pw1.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_4pw.xtc
+title:	o13:FRAMES:Avg_side_chain_chi>LF:HETs_4pw
+additional_info:	Avg_side_chain_chi>LF
+filename:	o13_FRAMES_Avg_side_chain_chi_LF_HETs_4pw.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o13:FRAMES:Avg_AvOb_Direct:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_Direct
+filename:	o13_FRAMES_Avg_AvOb_Direct_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o13:FRAMES:Avg_AvOb_Product:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_Product
+filename:	o13_FRAMES_Avg_AvOb_Product_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o13:FRAMES:Avg_AvOb_PAS>hops_3site:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_PAS>hops_3site
+filename:	o13_FRAMES_Avg_AvOb_PAS_hops_3site_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o13:FRAMES:Avg_AvOb_hops_3site>methylCC:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_hops_3site>methylCC
+filename:	o13_FRAMES_Avg_AvOb_hops_3site_methylCC_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o13:FRAMES:Avg_AvOb_methylCC>chi_hop:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_methylCC>chi_hop
+filename:	o13_FRAMES_Avg_AvOb_methylCC_chi_hop_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o13:FRAMES:Avg_AvOb_chi_hop>side_chain_chi:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_chi_hop>side_chain_chi
+filename:	o13_FRAMES_Avg_AvOb_chi_hop_side_chain_chi_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o13:FRAMES:Avg_AvOb_side_chain_chi>chi_hop:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_side_chain_chi>chi_hop
+filename:	o13_FRAMES_Avg_AvOb_side_chain_chi_chi_hop_HETs_MET_4pw_SegB.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o13:FRAMES:Avg_AvOb_chi_hop>side_chain_chi:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_chi_hop>side_chain_chi
+filename:	o13_FRAMES_Avg_AvOb_chi_hop_side_chain_chi_HETs_MET_4pw_SegB1.data
+END:DATA
+DATA
+Type:	Frames
+status:	opt_fit
+short_file:	HETs_MET_4pw_SegB.xtc
+title:	o13:FRAMES:Avg_AvOb_side_chain_chi>LF:HETs_MET_4pw_SegB
+additional_info:	Avg_AvOb_side_chain_chi>LF
+filename:	o13_FRAMES_Avg_AvOb_side_chain_chi_LF_HETs_MET_4pw_SegB.data
+END:DATA

@@ -1,0 +1,14 @@
+
+
+Figure 1: Fig1_compare_sims.py
+Figure 2: Fig2_chimera_plots.py
+Figure 3: Fig3_testfit_approach.py (B/C), Fig3_plot_met.py (D/E)
+
+
+
+
+
+SI Fig. 1: No script
+SI Fig. 2: No script
+SI Fig. 3: SI_Fig3_HN_exp_v_sim.py
+SI Fig. 4: Fig2_chimera_plots.py
