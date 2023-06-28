@@ -117,30 +117,49 @@ class S_v_pop():
         """
         S=np.abs(np.atleast_1d(S))  #Fit absolute values
         
-        i=len(self.S)>>1
-        p1=linear_ex(self.S[i:],self.p1[i:],S)
-        i=np.argmin(np.abs(self.Seq))
-        p1eq1=linear_ex(np.abs(self.Seq[i:]),self.p1[i:],S)
-        p1eq2=linear_ex(np.abs(self.Seq[:i]),self.p1[:i],S)
+        S[S>1]=1
+        S[S<1/3]=1/3
         
-        #Disallowed values
-        i=S<1/3
-        p1[i]=np.nan
-        p1eq1[i]=1/3
-        p1eq2[i]=1/3
+        p1=np.ones([3,len(S)])*np.nan
         
-        i=S>1
-        p1[i]=1
-        p1eq1[i]=1
-        p1eq2[i]=1
+        #%% First values for S>0.5
+        i=S>=0.5
+        half=len(self.p1)//2
+        p1[0][i]=linear_ex(self.S[half:],self.p1[half:],S[i])
+        p1[1][i]=linear_ex(self.Seq[half:],self.p1[half:],S[i])
         
-        i=S>-self.Seq[0]
-        p1eq2[i]=np.nan
-        
+        #%% Then values for S<0.5
         i=S<0.5
-        p1[i]=np.nan
+        third=len(self.p1)//3
+        p1[1][i]=linear_ex(np.abs(self.Seq[third:]),self.p1[third:],S[i])
+        p1[2][i]=linear_ex(np.abs(self.Seq[:third]),(1-self.p1[:third])/2,S[i])
+        return p1
         
-        return np.concatenate(([p1],[p1eq1],[p1eq2]),axis=0).squeeze()
+        
+        # i=len(self.S)>>1
+        # p1=linear_ex(self.S[i:],self.p1[i:],S)
+        # i=np.argmin(np.abs(self.Seq))
+        # p1eq1=linear_ex(np.abs(self.Seq[i:]),self.p1[i:],S)
+        # p1eq2=linear_ex(np.abs(self.Seq[:i]),self.p1[:i],S)
+        
+        # #Disallowed values
+        # i=S<1/3
+        # p1[i]=np.nan
+        # p1eq1[i]=1/3
+        # p1eq2[i]=1/3
+        
+        # i=S>1
+        # p1[i]=1
+        # p1eq1[i]=1
+        # p1eq2[i]=1
+        
+        # i=S>-self.Seq[0]
+        # p1eq2[i]=np.nan
+        
+        # i=S<0.5
+        # p1[i]=np.nan
+        
+        # return np.concatenate(([p1],[p1eq1],[p1eq2]),axis=0).squeeze()
     
     def __call__(self,S,resid):
         """
