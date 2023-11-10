@@ -24,4 +24,4 @@ All files are copyrighted under the GNU General Public License. A copy of the li
 
 Copyright 2023 Albert Smith-Penzel
 
-This research was supported by Deutsche Forschungsgemeinschaft (DFG) through CRC 1423, project number 421152132, subproject A02 (D. Huster, P. Hildebrand) and through DFG grant 450148812 (A. A. Smith)
+This research was supported by Deutsche Forschungsgemeinschaft (DFG) through DFG grant 450148812 (A. A. Smith), ESF grant SAB 100382164 (Kai Zumpfe, A. A. Smith), and through the CNRS.
