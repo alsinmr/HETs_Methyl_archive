@@ -62,32 +62,28 @@ class S_v_pop():
 
         """
         ax=plt.figure().add_subplot(111)
-        
-        # ax.plot(self.p1,self.S,color='red')
-        # ax.plot(self.p1,self.Seq,color='blue')
-        
-        # ax.plot(self.p1,np.abs(self.S),color='red',linestyle=':')
-        # ax.plot(self.p1,np.abs(self.Seq),color='blue',linestyle=':')
-        
-        # ax.legend((r'$p_3$=0',r'$p_2=p_3$'))
-        # ax.set_xlabel(r'$p_1$')
-        # ax.set_ylabel(r'S')
+        ax.vlines(1/3,-.5,1,color='grey',linestyle=':')
         
         cmap=plt.get_cmap('tab10')
-        
         half=len(self.p1)//2
-        ax.plot(self.p1[half:],self.S[half:],color=cmap(0))
         third=len(self.p1)//3
-        ax.plot(self.p1[third:half],self.Seq[third:half],color=cmap(1))
-        ax.plot(self.p2eq[1:third],self.Seq[1:third],color=cmap(6))
+        
+        ax.fill_between(self.p1[half:],self.S[half:],self.Seq[half:],color='lightgrey')
+        ax.fill_between(self.p1[third:half+1],np.abs(self.Seq[third:half+1]),
+                        np.abs(self.Seq[third+1:0:-2]),color='lightgrey')
+        
+        hdls=[]
+        hdls.append(ax.plot(self.p1[half:],self.S[half:],color=cmap(0))[0])
+        hdls.append(ax.plot(self.p1[third:half],self.Seq[third:half],color=cmap(1))[0])
+        hdls.append(ax.plot(self.p2eq[1:third],self.Seq[1:third],color=cmap(6))[0])
         ax.plot(self.p1[half:],self.Seq[half:],color=cmap(1))
         ax.plot(self.p1[third:],np.abs(self.Seq[third:]),color=cmap(1),linestyle=':')
         ax.plot(self.p2eq[:third],np.abs(self.Seq[:third]),color=cmap(6),linestyle=':')
         
-        ax.legend((r'$p_3=0$',r'$p_2=p_3$',r'$p_1=p_2$'))
+        ax.legend(hdls,(r'$p_1>p_2,p_3=0$',r'$p_1>p_2=p_3$',r'$p_1=p_2>p_3$'))
         ax.set_xlabel(r'major population ($p_1$)')
         ax.set_ylabel(r'$S_\mathrm{rotamer}$')
-        ax.set_xlim([0,1])
+        ax.set_xlim([1/3,1])
         ax.set_ylim([-.5,1])
         
     def get_pop(self,S):
@@ -124,42 +120,19 @@ class S_v_pop():
         
         #%% First values for S>0.5
         i=S>=0.5
-        half=len(self.p1)//2
-        p1[0][i]=linear_ex(self.S[half:],self.p1[half:],S[i])
-        p1[1][i]=linear_ex(self.Seq[half:],self.p1[half:],S[i])
+        if i.sum():
+            half=len(self.p1)//2
+            p1[0][i]=linear_ex(self.S[half:],self.p1[half:],S[i])
+            p1[1][i]=linear_ex(self.Seq[half:],self.p1[half:],S[i])
         
         #%% Then values for S<0.5
         i=S<0.5
-        third=len(self.p1)//3
-        p1[1][i]=linear_ex(np.abs(self.Seq[third:]),self.p1[third:],S[i])
-        p1[2][i]=linear_ex(np.abs(self.Seq[:third]),(1-self.p1[:third])/2,S[i])
+        if i.sum():
+            third=len(self.p1)//3
+            p1[1][i]=linear_ex(np.abs(self.Seq[third:]),self.p1[third:],S[i])
+            p1[2][i]=linear_ex(np.abs(self.Seq[:third]),(1-self.p1[:third])/2,S[i])
         return p1
         
-        
-        # i=len(self.S)>>1
-        # p1=linear_ex(self.S[i:],self.p1[i:],S)
-        # i=np.argmin(np.abs(self.Seq))
-        # p1eq1=linear_ex(np.abs(self.Seq[i:]),self.p1[i:],S)
-        # p1eq2=linear_ex(np.abs(self.Seq[:i]),self.p1[:i],S)
-        
-        # #Disallowed values
-        # i=S<1/3
-        # p1[i]=np.nan
-        # p1eq1[i]=1/3
-        # p1eq2[i]=1/3
-        
-        # i=S>1
-        # p1[i]=1
-        # p1eq1[i]=1
-        # p1eq2[i]=1
-        
-        # i=S>-self.Seq[0]
-        # p1eq2[i]=np.nan
-        
-        # i=S<0.5
-        # p1[i]=np.nan
-        
-        # return np.concatenate(([p1],[p1eq1],[p1eq2]),axis=0).squeeze()
     
     def __call__(self,S,resid):
         """
@@ -177,37 +150,40 @@ class S_v_pop():
         None.
 
         """
+        
+        #Loop if multiple S/residues provided
+        if hasattr(S,'__len__') or hasattr(resid,'__len__'):
+            assert hasattr(S,'__len__') and hasattr(resid,'__len__'),"S and resid must have the same length"
+            assert len(S)==len(resid),"S and resid must have the same length"
+            
+            return np.array([self(S0,resid0) for S0,resid0 in zip(S,resid)]).T
+        
         which=self.which_pop(resid)
-        if hasattr(which,'__len__'):which=which[0]
         
-        
-        if S<.5 and which==0:which=1
-        pop=self.get_pop(S)[which]
-        
-        if which==0:
-            return np.sort([pop,1-pop,0])[::-1]
-        return np.sort([pop,(1-pop)/2,(1-pop)/2])[::-1]
-        
-        
+        return self.get_pop(S)[which[0 if S>=0.5 else 1]][0],which[0 if S>=0.5 else 1]
         
         
     
     def which_pop(self,resid):
         """
         Determines which assumptions to take on populations based on the results of
-        populations from the MD trajectory (HETs_MET_4pw)
+        populations from the MD trajectory (HETs_MET_4pw).
+        
+        Returns two results for each residue in resid. The first result is the
+        best model choice if S>=0.5. The second result is the best model 
+        choice if S<=0.5
 
         Parameters
         ----------
         resid : int
-            Which resid to use.
+            Which resid(s) to investigate.
 
         Returns
         -------
         int
-            0 : assume p3=0
-            1 : assume p2=p3, p1>=1/3
-            2 : assume p2=p3, p1<=1/3
+            0 : assume p1>p2,p3=0
+            1 : assume p1>p2=p3
+            2 : assume p1=p2>p3
         """
         if not(hasattr(self,'md')):self.md=load_md()[1]
         
@@ -216,10 +192,21 @@ class S_v_pop():
         
         pop=self.md[resid]['pop_outer']  #Get the outer population
         
-        if pop[0]>1/3 and pop[2]>0.5*pop[1]:return 1  #pop[2] a significant fraction of pop[1]
-        if pop[0]>0.5:return 0
-        if pop[1]/pop[0]>pop[2]/pop[1]:return 2  #First two populations equal, large compared to third (third pop is p1)
-        return 1
+        out=np.zeros(2,dtype=int)
+        if pop[1]>0.5*pop[2]:
+            out[0]=0   #Assume p1>p2,p3=0
+        else:
+            out[0]=1   #Assume p1>p2=p3
+        if pop[1]/pop[0]<pop[2]/pop[1]: 
+            out[1]=1    #Assume p1>p2=p3
+        else:
+            out[1]=2    #Assume p1=p2>p3
+        
+        return out        
+        # if pop[0]>1/3 and pop[2]>0.5*pop[1]:return 1  #pop[2] a significant fraction of pop[1]
+        # if pop[0]>0.5:return 0
+        # if pop[1]/pop[0]>pop[2]/pop[1]:return 2  #First two populations equal, large compared to third (third pop is p1)
+        # return 1
         
               
 S_v_pop=S_v_pop()  #Initialize the class (use as function, i.e. callable)
@@ -264,116 +251,131 @@ def load_md():
 
 if __name__=='__main__':
     #Read out MD population results
+    md_no,md_corr=load_md()   #These are populations for MD (4pw) without and with methyl correction
     
-    md_no,md_corr=load_md()
-    
-    #Plot experiment and simulation                
-    
-    
-    #Read in NMR results and residues
-    data=pyDR.Project('Projects/directHC')['NMR']['raw']
-    S=data.S2**(0.5)*3  #Remove methyl contribution
+    #Read in NMR S values, residue numbers and names
+    data=pyDR.Project('Projects/directHC')['NMR']['raw'][0]
+    S=data.S2**(0.5)*3  #Remove methyl contribution (S*3)
     resids=[int(lbl[:3]) if len(lbl.split(','))==1 else [int(l0[:3]) for l0 in lbl.split(',')] \
             for lbl in data.label]   
     names=[lbl[3:].upper() if len(lbl.split(','))==1 else 'VAL' for lbl in data.label]
     
-    w=0.13
-    w1=0.25
+    #Kick out alanines
+    i=np.array(names)!='ALA'
+    resids,S,names=np.array(resids,dtype=object)[i],S[i],np.array(names)[i]
+     
+    #Plot setup
+    ax=plt.subplots()[1] 
+    w=0.13  #Bar width
+    w1=0.25 #For spacing between chi1, chi2
     off=.03
+    clrs=(plt.get_cmap('tab10')(7),plt.get_cmap('tab10')(1),plt.get_cmap('tab10')(0))
+    
+
+    
+    #Get the experimental populations
+    res=np.concatenate([np.atleast_1d(res)[:1] for res in resids])
+    pop_exp,which=S_v_pop(S, res)
+    
+    #Now define x-axis labels
     xlabel=list()
-    xlabel1=list()
-    
-    ax=plt.figure().add_subplot(111)
-    ax1=plt.figure().add_subplot(111)
-    clrs=(plt.get_cmap('tab10')(7),plt.get_cmap('tab10')(0),plt.get_cmap('tab10')(1))
-    k=-1
-    pop=list()
-    for (resid,S0) in zip(resids,S):
-        if not(hasattr(resid,'__len__')) and resid not in md_no:
-            pop.append(1)
-            continue
-        
-        pop0=S_v_pop(S0,resid)
-        pop.append(pop0[0])
-        k+=1
-        
-        if hasattr(resid,'__len__'):
-            po=np.mean([md_no[res]['pop_outer'] for res in resid],axis=0)
-            poc=np.mean([md_corr[res]['pop_outer'] for res in resid],axis=0)
-            pi=None
-            pic=None
-        else:
-            po,poc=md_no[resid]['pop_outer'],md_corr[resid]['pop_outer']
-            pi,pic=(md_no[resid]['pop_inner'],md_corr[resid]['pop_inner']) if 'pop_inner' in md_no[resid] else (None,None)
-        
-
-        if pi is None:
-            ax.bar(k-w,pop[-1],width=w,color=clrs[0],edgecolor='black')
-            ax.bar(k,po[0],width=w,color=clrs[1],edgecolor='black')
-            ax.bar(k+w,poc[0],width=w,color=clrs[2],edgecolor='black')
-        else:
-            ax.bar(k-w*2.5-off,1,width=w,color=clrs[0],edgecolor='black')
-            ax.bar(k-w*1.5-off,pi[0],width=w,color=clrs[1],edgecolor='black')
-            ax.bar(k-w*0.5-off,pic[0],width=w,color=clrs[2],edgecolor='black')
-            ax.bar(k+w*0.5+off,pop[-1],width=w,color=clrs[0],edgecolor='black')
-            ax.bar(k+w*1.5+off,po[0],width=w,color=clrs[1],edgecolor='black')
-            ax.bar(k+w*2.5+off,poc[0],width=w,color=clrs[2],edgecolor='black')
-        
-        pop1=S_v_pop.get_pop(S0)
-        ax1.bar(k-w1,pop1[0],width=w1,color=clrs[0],edgecolor='black')
-        ax1.bar(k,pop1[1],width=w1,color=clrs[1],edgecolor='black')
-        ax1.bar(k+w1,(1-pop1[2])/2,width=w1,color=clrs[2],edgecolor='black')
-
-        string=r'$p_3=0$' if pop0[-1]==0 else (r'$p_2=p_3$' if pop0[1]==pop0[2] else r'$p_1=p_2$')
-        ax.text(k,1.1,string,horizontalalignment='center')
-            
-        if hasattr(resid,'__len__'):
-            xlabel.append(r'$\chi_1$'+'\n'+',\n'.join([f'{res}Val' for res in resid]))
-            xlabel1.append(xlabel[-1])
-        else:
-            if pi is None:
-                xlabel.append(r'$\chi_1$'+'\n'+f'{resid}{md_no[resid]["Name"]}')
-                xlabel1.append(xlabel[-1])
+    for name,resid,wh0 in zip(names,resids,which):
+        if name=='VAL':
+            if hasattr(resid,'__len__'):
+                xlabel.append(r'$\chi_1$'+'\nV264,\nV267,V275\n')
             else:
-                xlabel.append(r'$\chi_1$ $\chi_2$'+'\n'+f'{resid}{md_no[resid]["Name"]}')
-                xlabel1.append(r'$\chi_2$'+'\n'+f'{resid}{md_no[resid]["Name"]}')
-            
-    ax.set_xticks(range(len(xlabel)))
+                xlabel.append(r'$\chi_1$'+f'\nV{resid}\n\n')
+        else:
+            xlabel.append(r'$\chi_1$     $\chi_2$'+f'\n{name[0]}{resid}\n\n')
+        if wh0==0:xlabel[-1]+=r'$p_3=0$'
+        if wh0==1:xlabel[-1]+=r'$p_2=p_3$'
+        if wh0==2:xlabel[-1]+=r'$p_1=p_2$'
+    
+    #%%First, plot valines
+    i=names=='VAL'
+    
+    res=np.concatenate([np.atleast_1d(res)[:1] for res in resids[i]])
+    
+    
+    #Experiment
+    ax.bar(np.argwhere(i)[:,0]-w,pop_exp[i],width=w,color=clrs[0],edgecolor='black')
+    
+    #Simulation (no met corr)
+    pop=np.array([np.mean([md_no[res0]['pop_outer'][0] for res0 in res]) if hasattr(res,'__len__') else \
+                  md_no[res]['pop_outer'][0] for res in resids[i]])
+    ax.bar(np.argwhere(i)[:,0],pop,width=w,color=clrs[1],edgecolor='black')
+    
+    #Simulation (met corr)
+    pop=np.array([np.mean([md_corr[res0]['pop_outer'][0] for res0 in res]) if hasattr(res,'__len__') else \
+                  md_corr[res]['pop_outer'][0] for res in resids[i]])
+    ax.bar(np.argwhere(i)[:,0]+w,pop,width=w,color=clrs[2],edgecolor='black')
+    
+    #%% Then plot Leucine/Isoleucine
+    i=names!='VAL'
+    res=resids[i]
+    
+    #Experiment
+    ax.bar(np.argwhere(i)[:,0]-w-w1,np.ones(i.sum()),width=w,color=clrs[0],edgecolor='black')
+    ax.bar(np.argwhere(i)[:,0]-w+w1,pop_exp[i],width=w,color=clrs[0],edgecolor='black')
+    
+    #Simulation (no met corr)
+    pop=np.array([md_no[res0]['pop_inner'][0] for res0 in res])
+    ax.bar(np.argwhere(i)[:,0]-w1,pop,width=w,color=clrs[1],edgecolor='black')
+    
+    pop=np.array([md_no[res0]['pop_outer'][0] for res0 in res])
+    ax.bar(np.argwhere(i)[:,0]+w1,pop,width=w,color=clrs[1],edgecolor='black')
+    
+    #Simulation (met corr)
+    pop=np.array([md_corr[res0]['pop_inner'][0] for res0 in res])
+    ax.bar(np.argwhere(i)[:,0]-w1+w,pop,width=w,color=clrs[2],edgecolor='black')
+    
+    pop=np.array([md_corr[res0]['pop_outer'][0] for res0 in res])
+    ax.bar(np.argwhere(i)[:,0]+w1+w,pop,width=w,color=clrs[2],edgecolor='black')
+    
+    ax.set_xticks(range(len(S)))
     ax.set_xticklabels(xlabel)
-    ax.legend(('NMR (S)','MD (no corr.)','MD (met. corr.)'),loc='lower left')
-    ax.set_ylabel('major population')
-    ax.figure.set_size_inches([6.8,4.8])
+    ax.set_ylabel(r'major population ($p_1$)')
+    ax.figure.set_size_inches([8,5])
     ax.figure.tight_layout()
-    ax.set_yticks(np.linspace(0,1,5))
     
-    ax1.set_xticks(range(len(xlabel)))
-    ax1.set_xticklabels(xlabel1)
-    ax1.legend((r'$p_3=0$',r'$p_2=p_3$',r'$p_1=p_2$'),loc='lower left')
-    ax1.set_ylabel('major populaion')
-    ax1.figure.set_size_inches([6.8,4.8])
-    ax1.figure.tight_layout()
-    ax1.set_yticks(np.linspace(0,1,5))
+    #%% Plot showing range of values for major population for a given S
+    S_v_pop.plot()
     
+    #%% Now we make a plot with both possibilities (for SI)
+    w=0.25
+    ax=plt.subplots()[1]
+    pop=S_v_pop.get_pop(S)
+    cmap=plt.get_cmap('tab10')
+    ax.bar(np.arange(len(S))-w,pop[0],color=cmap(0),width=w,edgecolor='black')
+    ax.bar(np.arange(len(S)),pop[1],color=cmap(1),width=w,edgecolor='black')
+    ax.bar(np.arange(len(S))+w,pop[2],color=cmap(6),width=w,edgecolor='black')
+    ax.legend([r'$p_1>p_2,p_3=0$',r'$p_1>p_2=p_3$',r'$p_1=p_2>p_3$'],loc='lower left')
+    
+    #Now define x-axis labels
+    xlabel=list()
+    for name,resid in zip(names,resids):
+        if name=='VAL':
+            if hasattr(resid,'__len__'):
+                xlabel.append(r'$\chi_1$'+'\nV264,\nV267,V275\n')
+            else:
+                xlabel.append(r'$\chi_1$'+f'\nV{resid}\n\n')
+        else:
+            xlabel.append(r'$\chi_2$'+f'\n{name[0]}{resid}\n\n')
+    ax.set_xticks(range(len(S)))
+    ax.set_xticklabels(xlabel)
+    ax.figure.set_size_inches([6.4,4.8])
+    ax.figure.tight_layout()
+    
+    #%% Plot results onto molecule
+    x=np.zeros(len(data))
+    i=np.array(['Ala' not in lbl for lbl in data.label])
+    x[i]=1-pop_exp
     data.project.chimera.close()    
-    data.select.chimera(x=1-np.array(pop),norm=False,color=(.1,.1,.1,1))    
+    
+    data.select.chimera(x=x,norm=False,color=(.1,.1,.1,1))    
     resi=np.concatenate([[str(res0) for res0 in resid] if hasattr(resid,'__len__') else [str(resid)] for resid in resids])
     data.project.chimera.command_line(['~show','show /B:'+','.join(resi)+'&:ILE,LEU,VAL',
-                                       '~ribbon','ribbon /B','lighting soft','graphics silhouettes true'])
+                                       '~ribbon','ribbon /B','lighting soft','graphics silhouettes true',
+                                       'sel /B&~:ILE,LEU,VAL','show sel','transparency sel 70 atoms','~sel'])
     
-            
-                    
-        
-    #Make a plot where we compare results of assumping p=3, p2=p3, p1=p2
-
-        
-                    
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
+    data.project.chimera.savefig('rotamer_pops',options='transparentBackground true')

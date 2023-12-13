@@ -52,8 +52,25 @@ core=np.array(core_i,dtype=bool)
 not_core=np.logical_not(core)
 resids=np.array(resids)
 
-
+#%% Function to calculate entropy
 def calcS(count):
+    """
+    Calculates the entropy of a system either from a total number of states
+    (equally populated, S=R*log(W)), or from an array of counts (or populations)
+    for each state.
+
+    Parameters
+    ----------
+    count : TYPE (integer or np.array)
+        INteger with total number of states, or array of either the counts for
+        each state or the population of each state.
+
+    Returns
+    -------
+    float
+        Entropy.
+
+    """
     R=8.314462
     if not(hasattr(count,'__len__')):
         return R*np.log(count)
@@ -112,28 +129,44 @@ ax.set_yticks(range(len(resids)))
 ax.set_yticklabels(resids)
 
 #%% Residuewise DelS
-DS_res=[]
-cc_res=[]
-for p,Sp in enumerate(S_R0):
-    i=np.ones(len(resids),dtype=bool)
-    i[p]=False
-    q=np.cumprod([1,*mult[i]])[:-1]
-    state0=(state[:,i]*q).sum(-1)
-    count=np.unique(state0,return_counts=True)[1]
-    S0=calcS(count)
-    DS_res.append(S[-1]-S0)
-    cc_res.append((Sp+S0-S[-1])/Sp)
-    
-ax=plt.subplots(1,1)[1]
-ax.bar(range(len(resids)),cc_res)
-ax.set_xticks(range(len(resids)))
-ax.set_xticklabels(resids,rotation=90)
+"""
+Below was an attempt to understand how individual residues were correlated 
+overall with all other residues. While not fundamentally wrong, I find it very 
+hard to explain what we are seeing– specifically, why are the ratio of entropy 
+of a given side chain to change in overall entropy when that side chain is 
+removed so low, when the total entropy vs. sum of side chain entropy ratio is 
+relatively high? It essentially states that a given side chain's state can be
+predicted based on a very large number of variables (i.e. all other side chain
+states), but the predictability of the individual chains on all other chains 
+does not translate into a significantly reduced entropy. I find this confusing 
+and not contributing to understanding in the paper, so I have deleted it. But,
+I think for greater transparency, we leave the code here.
+"""
 
-ax=plt.subplots(1,1)[1]
-ax.bar(range(len(resids)),S_R0)
-ax.bar(range(len(resids)),DS_res)
-ax.set_xticks(range(len(resids)))
-ax.set_xticklabels(resids,rotation=90)
+# DS_res=[]
+# cc_res=[]
+# for p,Sp in enumerate(S_R0):
+#     i=np.ones(len(resids),dtype=bool)
+#     i[p]=False
+#     q=np.cumprod([1,*mult[i]])[:-1]
+#     state0=(state[:,i]*q).sum(-1)
+#     count=np.unique(state0,return_counts=True)[1]
+#     S0=calcS(count)
+#     DS_res.append(S[-1]-S0)
+#     cc_res.append((Sp+S0-S[-1])/Sp)
+    
+# ax=plt.subplots(1,1)[1]
+# ax.bar(range(len(resids)),cc_res)
+# ax.set_xticks(range(len(resids)))
+# ax.set_xticklabels(resids,rotation=90)
+
+# ax=plt.subplots(1,1)[1]
+# ax.bar(range(len(resids)),S_R0)
+# ax.bar(range(len(resids)),DS_res)
+# ax.set_xticks(range(len(resids)))
+# ax.set_xticklabels(resids,rotation=90)
+
+
 
 
 #%% Time dependence of total S and residue-specific S

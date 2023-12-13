@@ -12,13 +12,24 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pyDR.misc.Averaging import avgData
 from pyDR.Fitting.fit import model_free
+from pyDR.misc.tools import linear_ex
+from copy import copy
 
 #%% Lib vs. Hop
 z2lib=Z2lib()
+z2lib.Amet=0.93
 data=pyDR.Project('Projects/directHC')['NMR']['proc'][0]  #Processed experimental data
 
 #%% Calculate methyl hopping, methyl librational amplitude from data
+"""
+We do two types of optimization for this calculation. Only this one is shown
+in the main text, but we note that the results are almost the same. Interestingly,
+results in Figure 4 (distribution of correlation times for non-methyl dynamics)
+are much more stable with the latter method. Then, we use this method in
+Figure 4
+"""
 z,sigma,z0=z2lib.fit2z_sigma(data)   #This uses the same function as for simulated data (Fig3_testfit_approach.py)
+
 
 
 #%% Plot methyl hopping correlation time, methyl librational amplitude results

@@ -1,3 +1,3 @@
 from chimerax.core.commands import run as rc
 
-rc(session,"sel #4")
+rc(session,"sel #1")

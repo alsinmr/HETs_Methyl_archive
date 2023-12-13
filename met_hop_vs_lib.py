@@ -42,7 +42,7 @@ class S2_2_libA():
             Standard deviation of Gaussian distribution.
 
         """
-        sigma0=np.atleast_2d(np.linspace(1,60,60))
+        sigma0=np.atleast_2d(np.linspace(1,360,360))
         theta=np.atleast_2d(np.linspace(-180,180,201)).T
         P2=1/27*(32*np.cos(theta*np.pi/180)**2+8*np.cos(theta*np.pi/180)-13)
         prob=np.exp(-(theta**2)@(1/(2*sigma0**2)))
@@ -57,6 +57,8 @@ class S2_2_libA():
         return linear_ex(self.S2,self.sigma,S2)
     
     def sigma2S2(self,sigma):
+        # if np.any(np.array(sigma)>360):
+        #     print('Warning: S2 only valid for values less than 360')
         return linear_ex(self.sigma,self.S2,sigma)
 
 S2_2_libA=S2_2_libA()  #Initialize an instance to use as a function ("callable")
@@ -100,6 +102,11 @@ class Z2lib():
         self.z=z
         self.sens=None
         self.rho=None
+        self.Amet=8/9
+
+    @property
+    def S2met(self):
+        return 1-self.Amet
         
     def z2lib(self,z):
         """
@@ -259,7 +266,7 @@ class Z2lib():
             
             i=np.argmin(((self.sens.rhoz[:n].T-rho)**2).sum(1))
             def fun(z):
-                rhoc=linear_ex(self.sens.z,self.sens.rhoz[:n],z).squeeze()
+                rhoc=linear_ex(self.sens.z,self.sens.rhoz[:n]*self.Amet,z).squeeze()
                 return (rhoc-rho)
             out=leastsq(fun,self.sens.z[i])
             z0.append(out[0][0])
@@ -292,7 +299,7 @@ class Z2lib():
         # S2=S2_2_libA.sigma2S2(sigma)
         S2=self.z2S2(z)
         
-        self.rho=sens.rhoz*(8/9-1+S2)+\
+        self.rho=sens.rhoz*(self.Amet-1+S2)+\
             np.atleast_2d(sens.rhoz[:,0]).T@np.atleast_2d((1-S2))
         self.sens=sens        
 

@@ -32,13 +32,15 @@ proj.chimera.saved_commands=['~show','ribbon /B','turn y -105','turn z 10',
 sub=proj['HETs_MET_4pw_SegB']-proj['Product']-proj['OuterHop']+proj['NMR']
 
 for d in sub:
-    for k in range(4):
+    if 'NMR' not in d.title:continue
+    for k in range(1):
         proj.chimera.close()
         scaling=1.5*(9 if (k>1 and ('MetHop' in d.title or 'Direct' in d.title or 'NMR' in d.title)) else 1)
         d.chimera(rho_index=k,scaling=scaling)
         
         if 'NMR' in d.title:
             proj.chimera.command_line('show /B:'+','.join([lbl[:3] for lbl in d.label]))
+            proj.chimera.command_line('show /B:267,275')
             sels=['(:'+lbl[:3]+('@HD*' if lbl[3:] in ['Leu','Ile'] else ('@HG*' if lbl[3:]=='Val' else '@HB*'))+')' for lbl in d.label]
         else:
             proj.chimera.command_line('show /B:'+','.join([lbl.split('_')[0] for lbl in d.label])+'&~H') #just show residues where we have data
@@ -52,3 +54,15 @@ for d in sub:
 "SI Figure 4"
 proj['HETs_MET_4pw_SegB']['Direct'].plot(style='bar')
 proj['HETs_MET_4pw_SegB']['Product'].plot()
+
+
+#%% Plot individual frames
+ylim=[.5,.9,.25,.6,.15,.7,.2]
+for d,yl in zip(sub[1:8],ylim):
+    sub.close_fig('all')
+    po=d.plot(style='bar',plot_sens=False)
+    for a in po.ax:a.set_ylim([0,yl])
+    po.fig.set_size_inches([6.4,6.2])
+    po.show_tc()
+    po.fig.tight_layout()
+    sub.savefig(f'{d.source.additional_info}.pdf')

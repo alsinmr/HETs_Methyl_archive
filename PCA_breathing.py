@@ -190,10 +190,11 @@ for k,(a,PCamp) in enumerate(zip(ax.T,pca.PCamp)):
             label.append('' if len(resi)>1 and resi[-1]==resi[-2] else str(resi[-1]))
             color.append(c0[0] if resi[-1] in core else c0[1])
             cc.append(np.corrcoef(Rmet.T[value['MET']],PCamp[::PCamp.shape[0]//N])[0][1])
-    a.bar(range(len(resi)),cc,color=color)
+    a.bar(range(len(resi)),-np.array(cc),color=color)
     a.set_xticks(range(len(resi)))
     a.set_xticklabels(label,rotation=90)
     a.text(0,a.get_ylim()[0]+.1,f'PC{k}')
+    a.plot(a.get_xlim(),[0,0],color='black')
     
     if k==1:
         ax1=plt.figure().add_subplot(111)
@@ -201,7 +202,9 @@ for k,(a,PCamp) in enumerate(zip(ax.T,pca.PCamp)):
         ax1.set_xticks(range(len(resi)))
         ax1.set_xticklabels(label,rotation=90)
         ax1.text(0,a.get_ylim()[0]+.1,f'PC{k}')
-        
+ 
+
+
 
 #%% Check correlation times
 nd=7
@@ -241,6 +244,16 @@ ax.set_xticks(range(nd))
 ax.set_xticklabels(lbls)
 ax.figure.tight_layout()
 
+# Plot detector analysis of all 10 PCs
+fig,ax=plt.subplots(5,2)
+ax=ax.flatten()
+for k,a in enumerate(ax):
+    for n in range(nd-1):
+        a.bar(range(nd-1),fit_pca.R[k][:-1],color=[plt.get_cmap('tab10')(k) for k in range(nd)])
+        a.set_title(f'PC {k}')
+fig.set_size_inches([7,11])
+fig.tight_layout()
+
 
 #%% Save pictures of principal componets
 
@@ -248,7 +261,7 @@ for k in range(10):
     pca.project.chimera.close()
     pca.chimera(n=k,std=3)
     pca.project.chimera.command_line(['turn z 25','turn y -90','turn z 10','set bgColor white'])
-    pca.project.chimera.savefig(f'/Users/albertsmith/Documents/GitHub/HETs_methyl_archive/PCA_results/Figures/pc{k}.png',
-                                options='transparentBackground True')
+    # pca.project.chimera.savefig(f'/Users/albertsmith/Documents/GitHub/HETs_methyl_archive/PCA_results/Figures/pc{k}.png',
+    #                             options='transparentBackground True')
 
 

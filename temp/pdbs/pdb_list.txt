@@ -1,9 +1,0 @@
-n20_FRAMES_Direct_HETs_MET_4pw_SegB.data:HETs_SegB:/Volumes/My Book/HETs/HETs_SegB.pdb
-n20_FRAMES_Product_HETs_MET_4pw_SegB.data:HETs_SegB:/Volumes/My Book/HETs/HETs_SegB.pdb
-n20_FRAMES_PAS_hops_3site_HETs_MET_4pw_SegB.data:HETs_SegB:/Volumes/My Book/HETs/HETs_SegB.pdb
-n20_FRAMES_hops_3site_methylCC_HETs_MET_4pw_SegB.data:HETs_SegB:/Volumes/My Book/HETs/HETs_SegB.pdb
-n20_FRAMES_methylCC_chi_hop_HETs_MET_4pw_SegB.data:HETs_SegB:/Volumes/My Book/HETs/HETs_SegB.pdb
-n20_FRAMES_chi_hop_side_chain_chi_HETs_MET_4pw_SegB.data:HETs_SegB:/Volumes/My Book/HETs/HETs_SegB.pdb
-n20_FRAMES_side_chain_chi_chi_hop_HETs_MET_4pw_SegB.data:HETs_SegB:/Volumes/My Book/HETs/HETs_SegB.pdb
-n20_FRAMES_chi_hop_side_chain_chi_HETs_MET_4pw_SegB1.data:HETs_SegB:/Volumes/My Book/HETs/HETs_SegB.pdb
-n20_FRAMES_side_chain_chi_LF_HETs_MET_4pw_SegB.data:HETs_SegB:/Volumes/My Book/HETs/HETs_SegB.pdb

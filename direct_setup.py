@@ -23,17 +23,18 @@ import os
 
 #%% Pre-processing
 md_dir='/Volumes/My Book/HETs/MDSimulation'
-topos=[*['HETs_3chain.pdb' for _ in range(4)],'HETs_2kj3.pdb','HETs_5chain_B.pdb'] #You need to re-run this!!!! (wrong pdb for 5chain)
+topos=[*['HETs_3chain.pdb' for _ in range(5)],'HETs_2kj3.pdb','HETs_5chain_B.pdb']
 trajs=[os.path.join(md_dir,traj) for traj in \
-       ['HETs_3pw.xtc','HETs_MET_3pw.xtc','HETs_4pw.xtc','HETs_MET_4pw.xtc',
+       ['HETs_3pw.xtc','HETs_MET_3pw.xtc','HETs_MET_tip3p_870ns.xtc','HETs_4pw.xtc','HETs_MET_4pw.xtc',
         'HETs_MET_4pw_2kj3.xtc','HETs_MET_4pw_5chain.xtc']]
 
-projHC=pyDR.Project('directHC',create=True)
-projHN=pyDR.Project('directHN',create=True)
+projHC=pyDR.Project('Projects/directHC',create=True)
+projHN=pyDR.Project('Projects/directHN',create=True)
     
 for proj in [projHC,projHN]:  #Loop over the two projects
+    sub=proj['no_opt']-proj['Avg']
     for topo,traj in zip(topos,trajs):
-        if traj in [d.select.traj.files[0] for d in proj]:continue #Check if this has already been run
+        if traj in [d.select.traj.files[0] for d in sub]:continue #Check if this has already been run
         print(traj)
         proj.clear_memory() #Reduce memory usage
         select=pyDR.MolSelect(topo=topo,traj_files=traj,project=proj)
@@ -95,23 +96,28 @@ for proj in [projHC,projHN]:
         proj['NMR']['raw'].detect.inclS2()
         proj['NMR']['raw'].fit()
         
-        
-        "We average together MD data to match experimental selections"
-        from pyDR.misc.Averaging import avg2sel
-        avg2sel(proj['MD']['no_opt'],proj['NMR']['raw'].select)
-        
-        
-        "Now process the averaged data to match the experimental detector sensitivites"
-        if proj is projHC:
-            target=proj['NMR']['proc'][-1].sens.rhoz[:4]
-            target[0,94:]=0
-        else:
-            target=proj['NMR']['proc'][-1].sens.rhoz[:3]
-            target[0,94:]=0
-            
-        proj['MD']['Avg'].detect.r_target(target=target,n=12)
-        proj['MD']['Avg'].fit(bounds=False)
-        proj['MD']['Avg']['proc'].opt2dist(rhoz_cleanup=False)
-        proj.save()
+    "Target functions to match experimental NMR sensitivities"
+    if proj is projHC:
+        target=proj['NMR']['proc'][-1].sens.rhoz[:4]
+        target[0,94:]=0
+    else:
+        target=proj['NMR']['proc'][-1].sens.rhoz[:3]
+        target[0,94:]=0
+    
+    
+    "We average together MD data to match experimental selections"
+    from pyDR.misc.Averaging import avg2sel
+    sub=proj['no_opt']['Avg']
+    for d in proj['no_opt']-sub:
+        if d.source.short_file not in sub.short_files:
+            avg2sel(d,proj['NMR']['raw'].select)
+    
+    
+    sub=proj['MD']['Avg']['proc']
+    proj['MD']['Avg'].detect.r_target(target=target,n=12)
+    for d in proj['MD']['Avg']-sub-proj['opt_fit']:
+        if d.source.short_file not in sub.short_files:
+            d.fit(bounds=False).opt2dist(rhoz_cleanup=False)
+    proj.save()
         
 

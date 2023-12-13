@@ -72,7 +72,7 @@ for topo,traj in zip(topos,trajs):
     pop_inner[i]=pop_inner0
         
     
-    #Same procedure as above for outer angle
+    "Same procedure as above for outer angle"
     vr=fr_obj.frame_info['info'][2]['vr']   #Reference vectors for the outer chi angle
     v=vft.applyFrame(vecs[2][0],nuZ_F=vecs[3][0],nuXZ_F=vecs[3][1])  #Aligned vectors for chi hopping
     state=np.argmax([(vr0.T*v.T).sum(axis=-1) for vr0 in vr],axis=0)  

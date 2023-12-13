@@ -206,3 +206,35 @@ title:	o12:MD:Avg:HETs_MET_4pw_5chain
 additional_info:	Avg
 filename:	o12_MD_Avg_HETs_MET_4pw_5chain.data
 END:DATA
+DATA
+Type:	MD
+status:	no_opt
+short_file:	HETs_MET_tip3p_870ns.xtc
+title:	n20:MD:HETs_MET_tip3p_870ns
+additional_info:	None
+filename:	n20_MD_HETs_MET_tip3p_870ns.data
+END:DATA
+DATA
+Type:	MD
+status:	no_opt
+short_file:	HETs_MET_tip3p_870ns.xtc
+title:	n20:MD:Avg:HETs_MET_tip3p_870ns
+additional_info:	Avg
+filename:	n20_MD_HETs_MET_tip3p_870ns1.data
+END:DATA
+DATA
+Type:	MD
+status:	proc
+short_file:	HETs_MET_tip3p_870ns.xtc
+title:	p12:MD:Avg:HETs_MET_tip3p_870ns
+additional_info:	Avg
+filename:	p12_MD_Avg_HETs_MET_tip3p_870ns.data
+END:DATA
+DATA
+Type:	MD
+status:	opt_fit
+short_file:	HETs_MET_tip3p_870ns.xtc
+title:	o12:MD:Avg:HETs_MET_tip3p_870ns
+additional_info:	Avg
+filename:	o12_MD_Avg_HETs_MET_tip3p_870ns.data
+END:DATA

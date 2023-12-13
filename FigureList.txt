@@ -3,12 +3,20 @@
 Figure 1: Fig1_compare_sims.py
 Figure 2: Fig2_chimera_plots.py
 Figure 3: Fig3_testfit_approach.py (B/C), Fig3_plot_met.py (D/E)
+Figure 4: Fig4_plot_chi_pop.py, Fig4_chi_dist.py
+Figure 5: Fig5_hop_rates.py
+Figure 6: Fig6_entropy.py
 
 
 
-
+Note that some of the SI figures are produced along side components for the
+main text figures, rather than having a separate script
 
 SI Fig. 1: No script
 SI Fig. 2: No script
 SI Fig. 3: SI_Fig3_HN_exp_v_sim.py
 SI Fig. 4: Fig2_chimera_plots.py
+SI Figs. 5-8: Fig2_chimera_plots.py
+SI Fig. 9: Fig4_plot_chi_pop.py
+SI Fig. 12-17: Fig5_hop_rates.py
+SI Fig. 22: Fig6_entropy.py

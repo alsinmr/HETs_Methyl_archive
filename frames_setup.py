@@ -28,7 +28,7 @@ remove our ability to re-process some of this data
 The 10 microsecond trajectories sampled every 5 ps create some challenges for
 data analysis, mainly that there are 2000000 time points. We do not really need
 to process all points simultaneously, so we have two projects here. The first,
-proj, takes the trajectory in five chunks, each sampled every 5 ps for 2 
+frames, takes the trajectory in five chunks, each sampled every 5 ps for 2 
 microseconds. This is used for analyzing faster, sub-microsecond motion. The 
 second, proj_s, also takes the trajectory in five chunks, only takes every
 fifth time point for the full 10 microseconds. This is repeated five times, 
